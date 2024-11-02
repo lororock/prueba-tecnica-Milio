@@ -1,4 +1,15 @@
 <div class="container">
-    <h3 class="search-title">¿Qué es lo que estás buscando?</h3>
-    <keyword-search></keyword-search>
+  <h3 class="search-title">¿Qué es lo que estás buscando?</h3>
+  <keyword-search></keyword-search>
+  <h4 class="categories">Categorías</h4>
+  <div class="categories-container">
+
+    @for(category of categories; track category.id){
+    <category-card
+      [icon]="category.icon"
+      [text]="category.text"
+    ></category-card>
+    }
+    
+  </div>
 </div>

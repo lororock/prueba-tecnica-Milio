@@ -1,11 +1,13 @@
 .container {
     margin: 0px 25px;
 }
-@media(min-width: 768px){
-    body{
+
+@media(min-width: 768px) {
+    body {
         margin: 0;
     }
 }
+
 .search-title {
     margin-top: 0;
     margin-bottom: 21px;
@@ -31,4 +33,22 @@
         line-height: 40px;
         letter-spacing: 0.25px;
     }
+}
+
+.categories {
+    margin: 53px 0px 21px 41px;
+    color: var(--Gris-subtitulos, #333);
+    text-align: left;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.categories-container {
+    margin: 0px 41px;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
