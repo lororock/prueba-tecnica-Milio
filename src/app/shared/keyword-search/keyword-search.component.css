@@ -1,7 +1,7 @@
 .container {
     margin: auto;
     display: flex;
-    width: 864px;
+    max-width: 864px;
     padding: 20px 30px;
     justify-content: space-between;
     align-items: center;
@@ -11,13 +11,19 @@
 
 .container input {
     color: var(--Gris-Tenue, #A9A9A9);
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.15px;
     border: none;
     width: 90%;
+}
+
+@media (min-width: 768px) {
+    .container input {
+        display: 20px;
+    }
 }
 
 .container input:focus {

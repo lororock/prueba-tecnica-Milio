@@ -1,11 +1,32 @@
+.container {
+    margin: 0px 21px;
+}
+@media(min-width: 768px){
+    body{
+        margin: 0;
+    }
+}
 .search-title {
+    margin-top: 0;
+    padding-top: 138px;
     color: var(--Negro-seleccin, #222324);
-    text-align: center;
-    font-size: 40px;
+    font-family: "DM Sans";
+    font-size: 34px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
-    /* 100% */
     letter-spacing: 0.25px;
-    margin-bottom: 21px;
+}
+
+@media (min-width: 768px) {
+    .search-title {
+        padding-top: 0px;
+        color: var(--Negro-seleccin, #222324);
+        text-align: center;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.25px;
+    }
 }
