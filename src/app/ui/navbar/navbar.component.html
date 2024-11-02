@@ -23,10 +23,10 @@
 
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item__active" routerLink="/"><a>Inicio</a></li>
-          <li class="nav-item" href="#">Categoria</li>
-          <li class="nav-item" href="#">Bolsa</li>
-          <li class="nav-item" routerLink="user">Perfil</li>
+          <li class="nav-item" routerLink="/" routerLinkActive="nav-item__active" [routerLinkActiveOptions]="{ exact: true }"><a>Inicio</a></li>
+          <li class="nav-item" routerLink="categoria" routerLinkActive="nav-item__active">Categoria</li>
+          <li class="nav-item" routerLink="bolsa" routerLinkActive="nav-item__active">Bolsa</li>
+          <li class="nav-item" routerLink="user" routerLinkActive="nav-item__active">Perfil</li>
         </ul>
       </nav>
     </div>
