@@ -1,5 +1,5 @@
 .container {
-    margin: 0px 21px;
+    margin: 0px 25px;
 }
 @media(min-width: 768px){
     body{
@@ -21,6 +21,7 @@
 
 @media (min-width: 768px) {
     .search-title {
+        margin-top: 40px;
         padding-top: 0px;
         color: var(--Negro-seleccin, #222324);
         text-align: center;
