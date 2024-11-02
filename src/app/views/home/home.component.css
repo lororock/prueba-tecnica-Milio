@@ -70,7 +70,7 @@
 .ventas-container {
     margin: 0px;
     margin-top: 25px;
-    display: inline-flex;
+    display: flex;
     align-items: flex-start;
     gap: 78px;
 

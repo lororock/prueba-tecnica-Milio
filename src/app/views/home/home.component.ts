@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { KeywordSearchComponent } from '@/app/shared/keyword-search/keyword-search.component';
 import { CategoryCardComponent } from '@/app/shared/category-card/category-card.component';
+import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [KeywordSearchComponent, CategoryCardComponent],
+  imports: [
+    KeywordSearchComponent,
+    CategoryCardComponent,
+    ProductCardComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

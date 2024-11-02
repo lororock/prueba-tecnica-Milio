@@ -1,6 +1,8 @@
 <div class="container">
+
   <h3 class="search-title">¿Qué es lo que estás buscando?</h3>
   <keyword-search></keyword-search>
+
   <h4 class="categories">Categorías</h4>
   <div class="categories-container">
     @for(category of categories; track category.id){
@@ -10,6 +12,7 @@
     ></category-card>
     }
   </div>
+
   <div class="ventas-container">
     <div class="ventas-item">
       <h4>Top ventas</h4>
@@ -46,4 +49,7 @@
       </svg>
     </div>
   </div>
+
+  <product-card></product-card>
+
 </div>
