@@ -7,9 +7,9 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 export const routes: Routes = [
   { path: '', component: MainComponent, children: [
     { path: '', component: HomeComponent },
+    { path: 'user', component: UserComponent },
     // { path: 'categorias', component: CategoryComponent }, se puede agregar mas rutas que requieran las barras de navegacion
   ]},
-  { path: 'user', component: UserComponent },
   { path: '**', component: NotFoundComponent }
 
 ];
