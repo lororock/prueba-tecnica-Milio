@@ -1,0 +1,11 @@
+.search-title {
+    color: var(--Negro-seleccin, #222324);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    /* 100% */
+    letter-spacing: 0.25px;
+    margin-bottom: 21px;
+}
