@@ -2,3 +2,8 @@
 :root {
     background-color: #F5F5F5;
 }
+body{
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
