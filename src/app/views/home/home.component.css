@@ -8,6 +8,7 @@
 }
 .search-title {
     margin-top: 0;
+    margin-bottom: 21px;
     padding-top: 138px;
     color: var(--Negro-seleccin, #222324);
     font-family: "DM Sans";
