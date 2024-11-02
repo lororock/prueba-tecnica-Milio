@@ -1,7 +1,6 @@
 .container {
     margin: 0px 25px;
 }
-
 @media(min-width: 768px) {
     body {
         margin: 0;
@@ -20,7 +19,6 @@
     line-height: 40px;
     letter-spacing: 0.25px;
 }
-
 @media (min-width: 768px) {
     .search-title {
         margin-top: 40px;
@@ -36,7 +34,7 @@
 }
 
 .categories {
-    margin: 53px 0px 21px 41px;
+    margin: 53px 0px 21px 0px;
     color: var(--Gris-subtitulos, #333);
     text-align: left;
     font-size: 24px;
@@ -44,11 +42,21 @@
     font-weight: 700;
     line-height: 32px;
 }
+@media (min-width: 768px) {
+    .categories{
+        margin: 53px 0px 21px 41px;;
+    }
+}
 
 .categories-container {
-    margin: 0px 41px;
+    margin: 0px;
     overflow: auto;
     display: flex;
     align-items: flex-start;
     gap: 20px;
+}
+@media (min-width: 768px) {
+    .categories-container{
+        margin: 0px 41px;;
+    }
 }
