@@ -67,9 +67,8 @@
     }
 }
 
-.ventas-container {
-    margin: 0px;
-    margin-top: 25px;
+.ventas-options {
+    margin: 25px 0px 40px 26px;
     display: flex;
     align-items: flex-start;
     gap: 78px;

@@ -34,7 +34,7 @@ export class NavbarMobileComponent implements OnDestroy {
     // Reiniciar el estado de visibilidad después de 3 segundos de inactividad
     this.activityTimeout = setTimeout(() => {
       this.isVisible = true;
-    }, 2000); // Ajusta el tiempo de inactividad aquí si lo deseas
+    }, 500); // Ajusta el tiempo de inactividad aquí si lo deseas
   }
 
   ngOnDestroy(): void {
