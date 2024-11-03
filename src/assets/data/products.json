@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "camisas",
+    "fullName": "Camiseta básica",
+    "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 29.99,
+    "imageUrl": "src/assets/img/logos/item-1.svg"
+  },
+  {
+    "id": 2,
+    "name": "Producto 2",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 2",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 39.99,
+    "imageUrl": "https://example.com/images/product2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Producto 3",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 49.99,
+    "imageUrl": "https://example.com/images/product3.jpg"
+  }
+]

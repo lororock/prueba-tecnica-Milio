@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { KeywordSearchComponent } from '@/app/shared/keyword-search/keyword-search.component';
 import { CategoryCardComponent } from '@/app/shared/category-card/category-card.component';
 import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
+import { ProductService } from '@/app/core/services/product.service';
+import { Product } from '@/app/core/models/product.model';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -14,6 +17,23 @@ import { ProductCardComponent } from '@/app/shared/product-card/product-card.com
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  public products: Product[] = [];
+
+  constructor(private productService: ProductService) {
+    this.loadProducts();
+  }
+
+  private loadProducts(): void {
+    this.productService.getProducts().subscribe({
+      next: (products) => {
+        this.products = products;
+      },
+      error: (err) => {
+        console.error('Error loading products:', err);
+      }
+    });
+  }
+  
   categories = [
     { id: 1, icon: '👟', text: 'Ropa' },
     { id: 2, icon: '⚽', text: 'Deporte' },
