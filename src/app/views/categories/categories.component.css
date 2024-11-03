@@ -1,0 +1,46 @@
+.container {
+    display: grid;
+    margin: 170px;
+    place-content: center;
+    background-color: #F5F5F5;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .container{
+        margin: 100px;
+    }
+}
+
+.container-center {
+    text-align: center;
+}
+
+.img-container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 14rem;
+    width: auto;
+    color: black;
+}
+
+@media (min-width: 640px) {
+    .img-container {
+        height: 16rem;
+    }
+}
+
+.text-expression {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01562em;
+    color: #1f2937;
+}
+
+.text-message {
+    margin-top: 1rem;
+    color: #6b7280;
+    font-size: 1.5rem;
+
+}
