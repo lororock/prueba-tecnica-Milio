@@ -5,25 +5,32 @@
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    padding: 10px 20px;
+    padding: 25px;
     color: #fff;
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    visibility: visible;
+}
+
+.container-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    visibility: hidden;
 }
 
 @media (min-width: 768px) {
     .container {
-
         display: none;
     }
 }
 
 .nav {
     display: flex;
-    width: 412px;
+    width: 392px;
     height: 97px;
     padding: 10px;
     justify-content: center;
     align-items: center;
-    gap: 70px;
     flex-shrink: 0;
     border-radius: 25px;
     background: #61E27D;
@@ -36,7 +43,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 70px;
     font-size: 0.875rem;
     list-style: none;
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div [ngClass]="isVisible ? 'container' : 'container-out'">
   <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item" routerLink="/">
