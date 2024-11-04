@@ -45,12 +45,79 @@
     width: 353px;
     height: 397px;
     padding: 30px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
     gap: 56px;
     flex-shrink: 0;
     border-radius: 30px;
     background-size: cover;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.90) 100%);
+    background-size: cover;
+}
+
+.img h2 {
+    color: var(--Blanco, #FFF);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57px;
+}
+
+.info-image {
+    margin-left: 20px;
+}
+
+.price {
+    color: var(--Blanco, #FFF);
+    margin-bottom: 50px;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.price div {
+    color: #AEAEAE;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+}
+
+.iconst-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.img-icons {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--Blanco, #FFF);
+    background-color: #FFF;
+}
+
+.img-icons p {
+    margin: 0;
+    color: var(--Blanco, #FFF);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.15px;
 }
 
 .info {
