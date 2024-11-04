@@ -1,4 +1,4 @@
-<div class="container">
+<div [ngClass]="{ 'container-active': text === 'Ropa', 'container': text !== 'Ropa' }">
   <div class="icon-container">
     <p>{{ icon }}</p>
   </div>
