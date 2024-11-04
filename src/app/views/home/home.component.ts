@@ -3,9 +3,9 @@ import { KeywordSearchComponent } from '@/app/shared/keyword-search/keyword-sear
 import { CategoryCardComponent } from '@/app/shared/category-card/category-card.component';
 import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
 import { ProductService } from '@/app/core/services/product.service';
-import { Product } from '@/app/core/models/product.model';
 import { PopUpsDescriptionComponent } from '../../shared/pop-ups-description/pop-ups-description.component';
 import { PopUpBagComponent } from "../../shared/pop-up-bag/pop-up-bag.component";
+import { Product } from '@/app/core/models/product.model';
 
 @Component({
   selector: 'app-home',

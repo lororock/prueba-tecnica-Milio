@@ -274,12 +274,11 @@
 }
 
 hr {
-    margin: 0;
+    margin: 24px 0px 18px 0px;
     margin-top: 24px;
     border: none;
     border-top: 2px solid #000;
     width: 100%;
-    margin: 20px auto;
 }
 
 .total {
@@ -304,7 +303,7 @@ hr {
 .button {
     cursor: pointer;
     margin: 0;
-    margin-top: 57px;
+    margin-top: 19px;
     display: flex;
     width: 250px;
     height: 60px;
