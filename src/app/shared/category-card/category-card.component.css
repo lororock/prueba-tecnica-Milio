@@ -25,6 +25,7 @@
 
 .icon-container p {
     color: #000;
+    margin: 0;
     text-align: center;
     font-family: Inter;
     font-size: 24px;
@@ -36,6 +37,7 @@
 
 .text-container p {
     color: var(--Gris-subtitulos, #333);
+    margin: 0;
     text-align: center;
     font-family: "DM Sans";
     font-size: 18px;
