@@ -4,7 +4,7 @@ import { CategoryCardComponent } from '@/app/shared/category-card/category-card.
 import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
 import { ProductService } from '@/app/core/services/product.service';
 import { Product } from '@/app/core/models/product.model';
-import { PopUpsDescriptionComponent } from "../../shared/pop-ups-description/pop-ups-description.component";
+import { PopUpsDescriptionComponent } from '../../shared/pop-ups-description/pop-ups-description.component';
 
 @Component({
   selector: 'app-home',
@@ -13,13 +13,14 @@ import { PopUpsDescriptionComponent } from "../../shared/pop-ups-description/pop
     KeywordSearchComponent,
     CategoryCardComponent,
     ProductCardComponent,
-    PopUpsDescriptionComponent
-],
+    PopUpsDescriptionComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  
+  showModal = false;
+
   public products: Product[] = [];
 
   constructor(private productService: ProductService) {
@@ -33,10 +34,10 @@ export class HomeComponent {
       },
       error: (err) => {
         console.error('Error loading products:', err);
-      }
+      },
     });
   }
-  
+
   categories = [
     { id: 1, icon: '👟', text: 'Ropa' },
     { id: 2, icon: '⚽', text: 'Deporte' },
@@ -46,4 +47,12 @@ export class HomeComponent {
     { id: 6, icon: '🎄', text: 'Navidad' },
     { id: 7, icon: '👓', text: 'Gafas' },
   ];
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
 }

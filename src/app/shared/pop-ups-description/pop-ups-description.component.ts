@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pop-ups-description',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './pop-ups-description.component.html',
   styleUrls: ['./pop-ups-description.component.css'],
 })
-export class PopUpsDescriptionComponent {}
+export class PopUpsDescriptionComponent {
+
+  @Output() closeModalEvent = new EventEmitter<void>();
+
+  onCloseModal() {
+    this.closeModalEvent.emit();
+  }
+}

@@ -48,11 +48,14 @@
   <div class="products-container">
     @if(products){ @for(product of products.slice(0, 7); track product.id) {
     <product-card
+      (openModalEvent)="openModal()"
       [name]="product.name"
       [price]="product.price"
       [img]="product.imageUrl"
     />
     } }
   </div>
-  <pop-ups-description/>
+  @if(showModal){
+  <pop-ups-description (closeModalEvent)="closeModal()" />
+  }
 </div>

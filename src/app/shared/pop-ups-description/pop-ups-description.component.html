@@ -1,7 +1,7 @@
 <div class="container">
   <div class="background">
     <div class="exit-container">
-      <div class="exit">
+      <div class="exit" (click)="onCloseModal()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -65,7 +65,7 @@
       </div>
 
       <div class="buttons">
-        <div class="cancel-button">
+        <div class="cancel-button" (click)="onCloseModal()">
           <p>Cancelar</p>
         </div>
         <div class="bolsa-button">
