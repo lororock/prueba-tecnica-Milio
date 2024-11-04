@@ -1,4 +1,5 @@
-import { Component, Output,EventEmitter } from '@angular/core';
+import { Component, Output,EventEmitter, Input } from '@angular/core';
+import { Product } from '@/app/core/models/product.model';
 
 @Component({
   selector: 'pop-ups-description',
@@ -8,7 +9,7 @@ import { Component, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./pop-ups-description.component.css'],
 })
 export class PopUpsDescriptionComponent {
-
+  @Input() product!: Product | null;
   @Output() closeModalEvent = new EventEmitter<void>();
 
   onCloseModal() {

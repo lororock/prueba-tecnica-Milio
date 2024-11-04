@@ -49,9 +49,8 @@
     align-items: flex-start;
     gap: 56px;
     flex-shrink: 0;
-    background-color: black;
     border-radius: 30px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.90) 100%), cover no-repeat;
+    background-size: cover;
 }
 
 .info {

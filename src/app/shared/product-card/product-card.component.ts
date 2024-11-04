@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Product } from '@/app/core/models/product.model';
 
 @Component({
   selector: 'product-card',
@@ -11,11 +12,12 @@ export class ProductCardComponent{
   @Input() name: string = '';
   @Input() price: number = 0;
   @Input() img: string = '';
+  @Input() product!: Product;
 
-  @Output() openModalEvent = new EventEmitter<void>();
+  @Output() openModalEvent = new EventEmitter<Product>();
 
-  onOpenModal() {
-    this.openModalEvent.emit();
+  handleClick() {
+    this.openModalEvent.emit(this.product);
   }
 
 }

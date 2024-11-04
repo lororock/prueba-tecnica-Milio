@@ -19,9 +19,9 @@ import { PopUpsDescriptionComponent } from '../../shared/pop-ups-description/pop
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  showModal = false;
-
   public products: Product[] = [];
+  public showModal = false;
+  public selectedProduct: Product | null = null;
 
   constructor(private productService: ProductService) {
     this.loadProducts();
@@ -48,7 +48,8 @@ export class HomeComponent {
     { id: 7, icon: '👓', text: 'Gafas' },
   ];
 
-  openModal() {
+  openModal(product: Product) {
+    this.selectedProduct = product;
     this.showModal = true;
   }
 
