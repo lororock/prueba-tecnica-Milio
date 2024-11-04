@@ -1,11 +1,13 @@
+import { ModalService } from './../../core/services/modal.service';
 import { Component } from '@angular/core';
 import { KeywordSearchComponent } from '@/app/shared/keyword-search/keyword-search.component';
 import { CategoryCardComponent } from '@/app/shared/category-card/category-card.component';
 import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
 import { ProductService } from '@/app/core/services/product.service';
 import { PopUpsDescriptionComponent } from '../../shared/pop-ups-description/pop-ups-description.component';
-import { PopUpBagComponent } from "../../shared/pop-up-bag/pop-up-bag.component";
+import { PopUpBagComponent } from '../../shared/pop-up-bag/pop-up-bag.component';
 import { Product } from '@/app/core/models/product.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -15,18 +17,29 @@ import { Product } from '@/app/core/models/product.model';
     CategoryCardComponent,
     ProductCardComponent,
     PopUpsDescriptionComponent,
-    PopUpBagComponent
-],
+    PopUpBagComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
   public products: Product[] = [];
   public showModal = false;
-  public showModalBag = true;
+  public showModalBag = false;
   public selectedProduct: Product | null = null;
+  private subscription!: Subscription;
 
-  constructor(private productService: ProductService) {
+  constructor(
+    private ModalService: ModalService,
+    private productService: ProductService
+  ) {
+    this.loadProducts();
+  }
+
+  ngOnInit() {
+    this.subscription = this.ModalService.openModalBag$.subscribe(() => {
+      this.openModalBag();
+    });
     this.loadProducts();
   }
 
@@ -64,5 +77,10 @@ export class HomeComponent {
   }
   closeModalBag() {
     this.showModalBag = false;
+  }
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

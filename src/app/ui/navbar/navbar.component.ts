@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { ModalService } from '@/app/core/services/modal.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,4 +11,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
+  constructor(private modalService: ModalService) {}
+
+  openBagModal() {
+    this.modalService.triggerOpenModalBag();
+  }
 }
