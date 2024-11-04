@@ -1,7 +1,7 @@
 .card-container {
     display: flex;
-    width: 205px;
-    height: 267px;
+    width: 183px;
+    height: 250px;
     padding: 0px 10px;
     flex-direction: column;
     justify-content: center;
