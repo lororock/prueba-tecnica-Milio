@@ -59,4 +59,7 @@
   @if(showModal){
   <pop-ups-description [product]="selectedProduct" (closeModalEvent)="closeModal()" />
   }
+  @if(showModalBag){
+    <pop-up-bag (closeModalEvent)="closeModalBag()"/> 
+  }
 </div>
