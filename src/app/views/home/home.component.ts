@@ -17,6 +17,7 @@ import { Product } from '@/app/core/models/product.model';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  
   public products: Product[] = [];
 
   constructor(private productService: ProductService) {

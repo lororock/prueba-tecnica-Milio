@@ -5,10 +5,7 @@
   <h4 class="categories">Categorías</h4>
   <div class="categories-container">
     @for(category of categories; track category.id){
-    <category-card
-      [icon]="category.icon"
-      [text]="category.text"
-    ></category-card>
+    <category-card [icon]="category.icon" [text]="category.text" />
     }
   </div>
 
@@ -48,8 +45,9 @@
       </svg>
     </div>
   </div>
-  @if(products){
-  {{ products[1]?.name }}
-  <product-card></product-card>
-  }
+  <div class="products-container">
+    @if(products){ @for(product of products; track product.id) {
+    <product-card [name]="product.name" [price]="product.price" [img]="product.imageUrl" />
+    } }
+  </div>
 </div>
