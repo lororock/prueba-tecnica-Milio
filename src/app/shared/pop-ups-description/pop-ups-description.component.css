@@ -12,6 +12,17 @@
     backdrop-filter: blur(3px);
 }
 
+.exit-container {
+    position: relative;
+}
+
+.exit {
+    position: absolute;
+    top: 57.52px;
+    right: 53.5px;
+    cursor: pointer;
+}
+
 .background {
     margin: 20px;
     min-width: 876px;
@@ -221,7 +232,8 @@
     line-height: 32px;
     user-select: none;
 }
-.cancel-button:active{
+
+.cancel-button:active {
     background: #E7E7E7;
 }
 
@@ -241,7 +253,8 @@
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(15px);
 }
-.bolsa-button:active{
+
+.bolsa-button:active {
     background: #00DD30;
 }
 
