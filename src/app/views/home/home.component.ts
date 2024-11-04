@@ -55,8 +55,7 @@ export class HomeComponent {
     this.selectedProduct = product;
     this.showModal = true;
   }
-  openModalBag(product: Product) {
-    this.selectedProduct = product;
+  openModalBag() {
     this.showModalBag = true;
   }
 
