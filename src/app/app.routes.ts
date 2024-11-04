@@ -13,5 +13,4 @@ export const routes: Routes = [
     //se puede agregar mas rutas que requieran las barras de navegacion
   ]},
   { path: '**', component: NotFoundComponent }
-
 ];

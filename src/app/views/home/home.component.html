@@ -1,6 +1,6 @@
 <div class="container">
   <h3 class="search-title">¿Qué es lo que estás buscando?</h3>
-  <keyword-search></keyword-search>
+  <keyword-search />
 
   <h4 class="categories">Categorías</h4>
   <div class="categories-container">
@@ -46,8 +46,12 @@
     </div>
   </div>
   <div class="products-container">
-    @if(products){ @for(product of products; track product.id) {
-    <product-card [name]="product.name" [price]="product.price" [img]="product.imageUrl" />
+    @if(products){ @for(product of products.slice(0, 7); track product.id) {
+    <product-card
+      [name]="product.name"
+      [price]="product.price"
+      [img]="product.imageUrl"
+    />
     } }
   </div>
 </div>

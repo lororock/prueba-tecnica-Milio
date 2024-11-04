@@ -6,7 +6,7 @@
     "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
     "tallas": ["S", "M", "L", "XL"],
     "price": 40,
-    "imageUrl": "src/assets/img/logos/item-1.svg"
+    "imageUrl": "img/logos/item-1.svg"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "Descripción del producto 2",
     "tallas": ["S", "M", "L", "XL"],
     "price": 300,
-    "imageUrl": "src/assets/img/products/item-2.svg"
+    "imageUrl": "img/products/item-2.svg"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 300,
-    "imageUrl": "src/assets/img/products/item-3.svg"
+    "imageUrl": "img/products/item-3.svg"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 300,
-    "imageUrl": "src/assets/img/products/item-4.svg"
+    "imageUrl": "img/products/item-4.svg"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 300,
-    "imageUrl": "src/assets/img/products/item-5.svg"
+    "imageUrl": "img/products/item-5.svg"
   },
   {
     "id": 6,
@@ -51,6 +51,114 @@
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 300,
-    "imageUrl": "src/assets/img/products/item-6.svg"
+    "imageUrl": "img/products/item-6.svg"
+  },
+  {
+    "id": 7,
+    "name": "Camisas",
+    "fullName": "Camiseta básica",
+    "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 40,
+    "imageUrl": "img/logos/item-1.svg"
+  },
+  {
+    "id": 8,
+    "name": "Adidas",
+    "fullName": "Zapatos adidas",
+    "description": "Descripción del producto 2",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-2.svg"
+  },
+  {
+    "id": 9,
+    "name": "Camisas",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-3.svg"
+  },
+  {
+    "id": 10,
+    "name": "Adidas",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-4.svg"
+  },
+  {
+    "id": 11,
+    "name": "Nike",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-5.svg"
+  },
+  {
+    "id": 12,
+    "name": "Correas",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-6.svg"
+  },
+  {
+    "id": 13,
+    "name": "Camisas",
+    "fullName": "Camiseta básica",
+    "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 40,
+    "imageUrl": "img/logos/item-1.svg"
+  },
+  {
+    "id": 14,
+    "name": "Adidas",
+    "fullName": "Zapatos adidas",
+    "description": "Descripción del producto 2",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-2.svg"
+  },
+  {
+    "id": 15,
+    "name": "Camisas",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-3.svg"
+  },
+  {
+    "id": 16,
+    "name": "Adidas",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-4.svg"
+  },
+  {
+    "id": 17,
+    "name": "Nike",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-5.svg"
+  },
+  {
+    "id": 18,
+    "name": "Correas",
+    "fullName": "Camiseta básica",
+    "description": "Descripción del producto 3",
+    "tallas": ["S", "M", "L", "XL"],
+    "price": 300,
+    "imageUrl": "img/products/item-6.svg"
   }
 ]
