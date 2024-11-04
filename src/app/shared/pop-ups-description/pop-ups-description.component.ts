@@ -1,10 +1,11 @@
 import { Component, Output,EventEmitter, Input } from '@angular/core';
 import { Product } from '@/app/core/models/product.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'pop-ups-description',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pop-ups-description.component.html',
   styleUrls: ['./pop-ups-description.component.css'],
 })

@@ -292,7 +292,7 @@
     letter-spacing: 0.15px;
 }
 
-.item-talla {
+.item-talla__active {
     display: flex;
     cursor: pointer;
     width: 35px;
@@ -305,8 +305,25 @@
     border-radius: 10px;
     background: #61E27D;
 }
+.item-talla {
+    display: flex;
+    cursor: pointer;
+    width: 35px;
+    height: 50px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #fff;
+}
 
-.item-talla p {
+.item-talla:hover{
+    background: #61E27D;
+}
+
+.item-talla__active p {
     user-select: none;
     color: #FFF;
     text-align: center;
@@ -315,6 +332,20 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.24px;
+}
+.item-talla p {
+    user-select: none;
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+
+.item-talla:hover p{
+    color: #fff;
 }
 
 .colors {
