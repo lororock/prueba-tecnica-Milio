@@ -6,6 +6,7 @@ import { ProductCardComponent } from '@/app/shared/product-card/product-card.com
 import { ProductService } from '@/app/core/services/product.service';
 import { PopUpsDescriptionComponent } from '../../shared/pop-ups-description/pop-ups-description.component';
 import { PopUpBagComponent } from '@/app/shared/pop-up-bag/pop-up-bag.component';
+import { ModalTicketComponent } from '@/app/ui/modal-ticket/modal-ticket.component';
 import { Product } from '@/app/core/models/product.model';
 import { Subscription } from 'rxjs';
 
@@ -18,6 +19,7 @@ import { Subscription } from 'rxjs';
     ProductCardComponent,
     PopUpsDescriptionComponent,
     PopUpBagComponent,
+    ModalTicketComponent,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
@@ -26,6 +28,7 @@ export class HomeComponent {
   public products: Product[] = [];
   public showModal = false;
   public showModalBag = false;
+  public showModalTicket = true;
   public selectedProduct: Product | null = null;
   private subscription!: Subscription;
 
@@ -71,12 +74,18 @@ export class HomeComponent {
   openModalBag() {
     this.showModalBag = true;
   }
+  openModalTicket(){
+    this.showModalTicket = true;
+  }
 
   closeModal() {
     this.showModal = false;
   }
   closeModalBag() {
     this.showModalBag = false;
+  }
+  closeModalTicket(){
+    this.showModalTicket = false;
   }
   ngOnDestroy() {
     if (this.subscription) {

@@ -8,9 +8,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./pop-up-bag.component.css']
 })
 export class PopUpBagComponent {
+  @Output() openModalEvent = new EventEmitter<void>();
   @Output() closeModalEvent = new EventEmitter<void>();
+
 
   onCloseModal() {
     this.closeModalEvent.emit();
+  }
+  onOpenModal() {
+    this.openModalEvent.emit();
+    this.onCloseModal()
   }
 }
