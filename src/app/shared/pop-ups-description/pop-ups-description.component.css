@@ -97,6 +97,23 @@
     gap: 20px;
 }
 
+.img-info__container {
+    position: relative;
+}
+
+.fav-img {
+    height: 30px;
+    padding: 7px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 50px;
+    background: var(--Blanco, #FFF);
+    position: absolute;
+    top: 73px;
+    right: 30px;
+    cursor: pointer;
+}
+
 .img-icons {
     display: flex;
     width: 25px;

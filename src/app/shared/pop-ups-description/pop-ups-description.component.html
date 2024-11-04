@@ -24,32 +24,53 @@
         </svg>
       </div>
       <div class="img-info">
-        <div
-          class="img"
-          [style.background-image]="'url(' + product?.imageUrl + ')'"
-        >
-          <div class="info-image">
-            <h2>
-              {{ product?.name }}
-            </h2>
-            <div class="price">
-              {{ product?.price }}$
-              <div>/ Talla S</div>
+        <div class="img-info__container">
+
+          <div
+            class="img"
+            [style.background-image]="'url(' + product?.imageUrl + ')'"
+          >
+            <div class="fav-img">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.75794 7.75849C5.88311 6.63366 7.40895 6.00177 8.99994 6.00177C10.5909 6.00177 12.1168 6.63366 13.2419 7.75849L14.9999 9.51499L16.7579 7.75849C17.3114 7.18543 17.9735 6.72833 18.7055 6.41388C19.4375 6.09942 20.2249 5.93391 21.0215 5.92698C21.8182 5.92006 22.6083 6.07187 23.3457 6.37356C24.083 6.67524 24.753 7.12076 25.3163 7.68412C25.8797 8.24747 26.3252 8.91738 26.6269 9.65476C26.9286 10.3921 27.0804 11.1822 27.0734 11.9789C27.0665 12.7756 26.901 13.5629 26.5865 14.2949C26.2721 15.0269 25.815 15.689 25.2419 16.2425L14.9999 26.486L4.75794 16.2425C3.63311 15.1173 3.00122 13.5915 3.00122 12.0005C3.00122 10.4095 3.63311 8.88365 4.75794 7.75849Z"
+                  fill="#F26F3F"
+                />
+              </svg>
             </div>
-          </div>
-          <div class="iconst-contain">
-            <div
-              class="img-icons"
-              [style.background-image]="'url(  img/products/item-1.svg  )'"
-            ></div>
-            <div
-              class="img-icons"
-              [style.background-image]="'url(  img/products/item-1.svg  )'"
-            ></div>
-            <div
-              class="img-icons"
-              [style.background-image]="'url(  img/products/item-1.svg  )'"
-            ><p>5+</p></div>
+            <div class="info-image">
+              <h2>
+                {{ product?.name }}
+              </h2>
+              <div class="price">
+                {{ product?.price }}$
+                <div>/ Talla S</div>
+              </div>
+            </div>
+            <div class="iconst-contain">
+              <div
+                class="img-icons"
+                [style.background-image]="'url(  img/products/item-1.svg  )'"
+              ></div>
+              <div
+                class="img-icons"
+                [style.background-image]="'url(  img/products/item-1.svg  )'"
+              ></div>
+              <div
+                class="img-icons"
+                [style.background-image]="'url(  img/products/item-1.svg  )'"
+              >
+                <p>5+</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="info">
