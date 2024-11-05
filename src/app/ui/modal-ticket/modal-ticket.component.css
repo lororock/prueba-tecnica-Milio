@@ -21,14 +21,19 @@
     top: 38px;
     right: 33.5px;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
+@media (min-width: 768px) {
+    .exit {
+        display: block;
+    }
+}
 
 .background {
     margin: 20px;
-    min-width: 876px;
-    height: 100vh;
+    width: 380px;
+    height: auto;
     flex-shrink: 0;
     background-color: #F9F9F9;
     border-radius: 40px;
@@ -38,7 +43,7 @@
 
 @media (min-width: 768px) {
     .background {
-        height: auto;
+        width: 628px;
     }
 }
 
