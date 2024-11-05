@@ -3,13 +3,13 @@ import { Product } from '@/app/core/models/product.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'pop-ups-description',
+  selector: 'modal-description',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './pop-ups-description.component.html',
-  styleUrls: ['./pop-ups-description.component.css'],
+  templateUrl: './modal-description.component.html',
+  styleUrls: ['./modal-description.component.css'],
 })
-export class PopUpsDescriptionComponent {
+export class ModalDescriptionComponent {
   @Input() product!: Product | null;
   @Output() closeModalEvent = new EventEmitter<void>();
 

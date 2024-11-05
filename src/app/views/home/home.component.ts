@@ -4,7 +4,7 @@ import { KeywordSearchComponent } from '@/app/shared/keyword-search/keyword-sear
 import { CategoryCardComponent } from '@/app/shared/category-card/category-card.component';
 import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
 import { ProductService } from '@/app/core/services/product.service';
-import { PopUpsDescriptionComponent } from '../../shared/pop-ups-description/pop-ups-description.component';
+import { ModalDescriptionComponent } from '@/app/ui/modal-description/modal-description.component';
 import { PopUpBagComponent } from '@/app/shared/pop-up-bag/pop-up-bag.component';
 import { ModalTicketComponent } from '@/app/ui/modal-ticket/modal-ticket.component';
 import { Product } from '@/app/core/models/product.model';
@@ -17,7 +17,7 @@ import { Subscription } from 'rxjs';
     KeywordSearchComponent,
     CategoryCardComponent,
     ProductCardComponent,
-    PopUpsDescriptionComponent,
+    ModalDescriptionComponent,
     PopUpBagComponent,
     ModalTicketComponent,
   ],
@@ -28,7 +28,7 @@ export class HomeComponent {
   public products: Product[] = [];
   public showModal = false;
   public showModalBag = false;
-  public showModalTicket = true;
+  public showModalTicket = false;
   public selectedProduct: Product | null = null;
   private subscription!: Subscription;
 

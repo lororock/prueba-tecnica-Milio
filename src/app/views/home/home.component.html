@@ -57,7 +57,7 @@
     } }
   </div>
   @if(showModal){
-  <pop-ups-description [product]="selectedProduct" (closeModalEvent)="closeModal()" />
+  <modal-description [product]="selectedProduct" (closeModalEvent)="closeModal()" />
   }
   @if(showModalBag){
     <pop-up-bag (closeModalEvent)="closeModalBag()" (openModalEvent)="openModalTicket()"/> 
