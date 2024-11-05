@@ -46,7 +46,7 @@
     </div>
   </div>
   <div class="products-container">
-    @if(products){ @for(product of products.slice(0, 7); track product.id) {
+    @if(products){ @for(product of products; track product.id) {
     <product-card
       (openModalEvent)="openModal($event)"
       [product]="product"

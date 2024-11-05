@@ -13,7 +13,7 @@
     "name": "Adidas",
     "fullName": "Zapatos adidas",
     "description": "Descripción del producto 2",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": ["8", "9", "9.5", "10"],
     "price": 300,
     "imageUrl": "img/products/item-2.svg"
   },
@@ -31,7 +31,7 @@
     "name": "Adidas",
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": ["8", "9", "9.5", "10"],
     "price": 300,
     "imageUrl": "img/products/item-4.svg"
   },
@@ -124,41 +124,5 @@
     "tallas": ["S", "M", "L", "XL"],
     "price": 300,
     "imageUrl": "img/products/item-2.svg"
-  },
-  {
-    "id": 15,
-    "name": "Camisas",
-    "fullName": "Camiseta básica",
-    "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
-    "imageUrl": "img/products/item-3.svg"
-  },
-  {
-    "id": 16,
-    "name": "Adidas",
-    "fullName": "Camiseta básica",
-    "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
-    "imageUrl": "img/products/item-4.svg"
-  },
-  {
-    "id": 17,
-    "name": "Nike",
-    "fullName": "Camiseta básica",
-    "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
-    "imageUrl": "img/products/item-5.svg"
-  },
-  {
-    "id": 18,
-    "name": "Correas",
-    "fullName": "Camiseta básica",
-    "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
-    "imageUrl": "img/products/item-6.svg"
   }
 ]
