@@ -152,7 +152,7 @@
 }
 
 
-.icon-back{
+.icon-back {
     height: 30px;
     padding: 7px;
     justify-content: flex-end;
@@ -164,11 +164,13 @@
     left: 30px;
     cursor: pointer;
 }
+
 @media (min-width: 768px) {
     .icon-back {
         display: none;
     }
 }
+
 .img-icons {
     display: flex;
     width: 25px;
@@ -262,6 +264,21 @@
     }
 }
 
+.text-description {
+    user-select: none;
+    margin: 0;
+    margin-top: 20px;
+    color: var(--Gris-Icon, #888);
+    font-size: 16px;
+    width: 412px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .tallas-container {
     margin-top: 16px;
     display: flex;
@@ -305,6 +322,7 @@
     border-radius: 10px;
     background: #61E27D;
 }
+
 .item-talla {
     display: flex;
     cursor: pointer;
@@ -319,7 +337,7 @@
     background: #fff;
 }
 
-.item-talla:hover{
+.item-talla:hover {
     background: #61E27D;
 }
 
@@ -333,6 +351,7 @@
     line-height: normal;
     letter-spacing: 0.24px;
 }
+
 .item-talla p {
     user-select: none;
     color: #000;
@@ -344,7 +363,7 @@
     letter-spacing: 0.24px;
 }
 
-.item-talla:hover p{
+.item-talla:hover p {
     color: #fff;
 }
 
@@ -395,7 +414,16 @@
 .buttons {
     display: flex;
     gap: 24px;
-    justify-content: flex-end;
+    position: static;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .button {
+        position: fixed;
+        justify-content: flex-end;
+
+    }
 }
 
 .cancel-button {
@@ -411,9 +439,15 @@
     border-radius: 25px;
     border: 1px solid #000;
     background: #FFF;
-    /* Down */
+    display: none;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(15px);
+}
+
+@media (min-width: 768px) {
+    .cancel-button {
+        display: block;
+    }
 }
 
 .cancel-button p {
@@ -433,7 +467,7 @@
 
 .bolsa-button {
     cursor: pointer;
-    margin: 45px 56px 47px 0;
+    margin: 0;
     display: flex;
     padding: 15px;
     width: 214px;
@@ -446,6 +480,13 @@
     /* Down */
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(15px);
+}
+
+@media (min-width: 768px) {
+    .bolsa-button {
+        margin: 45px 56px 47px 0;
+
+    }
 }
 
 .bolsa-button:active {

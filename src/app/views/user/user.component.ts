@@ -17,7 +17,6 @@ export class UserComponent implements OnInit {
   constructor(private readonly userService: UserService) {}
   async ngOnInit(): Promise<void> {
     await this.loadUser();
-    console.log(this.userData);
   }
 
   private readonly loadUser = async () => {
