@@ -1,6 +1,6 @@
 # Prueba Tecnica Milio
 
-Este es un proyecto realizado para una prueba tecnica en Milio `https://milio.com.co/` para desarrollador frontend Angular
+Este es un proyecto realizado para una prueba tecnica en Milio [https://milio.com.co/](https://milio.com.co/) para desarrollador frontend Angular
 
 ## Descripción General
 
@@ -32,7 +32,7 @@ Para manejar las categorías de productos, se utiliza un array que se pasa como 
 
 ### Llamada a API para Obtener un Usuario Aleatorio
 
-Para mostrar una imagen de usuario en la vista de usuario, la aplicación realiza una llamada a una API externa `https://randomuser.me/api/` que devuelve un usuario aleatorio. Esto se realiza utilizando el servicio HttpClient de Angular, que permite hacer solicitudes HTTP de manera sencilla.
+Para mostrar una imagen de usuario en la vista de usuario, la aplicación realiza una llamada a una API externa [https://randomuser.me/api/](https://randomuser.me/api/) que devuelve un usuario aleatorio. Esto se realiza utilizando el servicio HttpClient de Angular, que permite hacer solicitudes HTTP de manera sencilla.
 
 ## Funcionamiento de las Rutas
 
