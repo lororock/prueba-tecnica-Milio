@@ -115,7 +115,12 @@
     width: 80px;
     height: 80px;
     border-radius: 20px;
-    background-color: #222324;
+}
+
+.product-img img{
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
 }
 
 .product-info {
