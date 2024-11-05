@@ -24,11 +24,15 @@ Esta arquitectura ayuda a que la aplicación sea más modular y testeable, facil
 
 Para cargar la información de los productos, la aplicación utiliza un archivo `JSON local`. Este enfoque permite cargar datos de manera rápida y eficiente durante el desarrollo y las pruebas. El archivo productos.json contiene un arreglo de objetos, cada uno representando un producto con atributos como id, nombre,tallas, precio, imagen, y descripción.
 
+![alt text](image-Json.png)
+
 Este JSON es consumido en el componente correspondiente a la lista de productos mediante un servicio que lee el archivo y lo transforma en un array de objetos que puede ser utilizado en la interfaz de usuario.
 
 ### Uso de Props para Categorías
 
-Para manejar las categorías de productos, se utiliza un array que se pasa como props a los componentes correspondientes. Este array se define en el componente padre y se distribuye entre los componentes hijos, permitiendo que cada componente tenga acceso a la información necesaria sobre las categorías, el componente `Category-card` recibe un array de categorías como propiedad de entrada, lo que permite que el componente se mantenga modular y reutilizable.
+Para manejar las categorías de productos, se utiliza un array que se pasa como props a los componentes correspondientes. Este array se define en el componente padre y se distribuye entre los componentes hijos, permitiendo que cada componente tenga acceso a la información necesaria sobre las categorías, el componente `Category-card` recibe un array de categorías como propiedad de entrada este se lo envia `HomeComponent`, lo que permite que el componente se mantenga modular y reutilizable.
+
+![alt text](image-array.png)
 
 ### Llamada a API para Obtener un Usuario Aleatorio
 
