@@ -242,4 +242,43 @@
       </svg>
     </div>
   </div>
+  <div class="pedido-container__mobile">
+    <div class="pedido-mobile__container">
+      <div class="hidden-info">
+        <hr />
+        <h4>Informacion del pedido</h4>
+      </div>
+      <!-- Seperar a componente -->
+      <div class="product-pedido">
+        <div class="product-pedido__icon">
+          <p>🎲</p>
+        </div>
+        <p>producto (3): $234</p>
+      </div>
+      <!-- Seperar a componente -->
+      <div class="product-impuesto">
+        <div class="product-impuesto__icon">
+          <p>💰</p>
+        </div>
+        <p>Impuestos: $24</p>
+      </div>
+      <hr />
+      <div class="total">
+        <p>Total:</p>
+        <p>$258</p>
+      </div>
+      <div class="button-container">
+        <div class="button-buy" (click)="onOpenModal()">
+          <p>Comprar</p>
+        </div>
+      </div>
+    </div>
+    <div class="show-pedido__container">
+      <div class="button-container">
+        <div class="button-show">
+          <p>Detalle delpedido</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
