@@ -36,17 +36,9 @@ Para mostrar una imagen de usuario en la vista de usuario, la aplicación realiz
 
 ## Funcionamiento de las Rutas
 
-La aplicación utiliza un sistema de rutas de la siguiente manera:
+La aplicación utiliza un sis-routestema de rutas de la siguiente manera:
 
-export const routes: Routes = [
-  { path: '', component: MainComponent, children: [
-    { path: '', component: HomeComponent },
-    { path: 'user', component: UserComponent },
-    { path: 'categories', component: CategoriesComponent },
-    // Se pueden agregar más rutas que requieran las barras de navegación
-  ]},
-  { path: '**', component: NotFoundComponent }
-];
+![alt text](image-routes.png)
 
 Ruta Principal (MainComponent): La ruta base (path: '') carga el `MainComponent`, que es un contenedor que incluye las secciones principales de la aplicación. Este componente contiene la barra de navegación que es compartida en varias páginas. esta ruta esta ubicada en `AppComponent` para crear rutas futuras como las de administracion
 
