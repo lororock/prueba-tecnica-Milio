@@ -12,9 +12,9 @@ La aplicación sigue una `Arquitectura Hexagonal`, también conocida como arquit
 
 En esta estructura:
 
- -`Capa de Dominio`: Contiene las reglas de negocio principales de la aplicación. Este es el "corazón" de la aplicación, sin dependencias externas.
+ -Capa de Dominio:Contiene las reglas de negocio principales de la aplicación. Este es el "corazón" de la aplicación, sin dependencias externas localizado en `app.component`
 
- -Capa de Aplicación: Contiene los casos de uso de la aplicación, orquestando la interacción entre el dominio y las interfaces.
+ -Capa de Aplicación: Contiene los casos de uso de la aplicación, orquestando la interacción entre el dominio y las interfaces estan en `main.component`
 
  -Adaptadores: Aquí se encuentran las implementaciones de los puertos que conectan el dominio con el mundo externo, como servicios de bases de datos, controladores de API y la interfaz de usuario (UI).
 
@@ -22,7 +22,7 @@ Esta arquitectura ayuda a que la aplicación sea más modular y testeable, facil
 
 ### Consumo de JSON Local
 
-Para cargar la información de los productos, la aplicación utiliza un archivo JSON local. Este enfoque permite cargar datos de manera rápida y eficiente durante el desarrollo y las pruebas. El archivo productos.json contiene un arreglo de objetos, cada uno representando un producto con atributos como id, nombre,tallas, precio, imagen, y descripción.
+Para cargar la información de los productos, la aplicación utiliza un archivo `JSON local`. Este enfoque permite cargar datos de manera rápida y eficiente durante el desarrollo y las pruebas. El archivo productos.json contiene un arreglo de objetos, cada uno representando un producto con atributos como id, nombre,tallas, precio, imagen, y descripción.
 
 Este JSON es consumido en el componente correspondiente a la lista de productos mediante un servicio que lee el archivo y lo transforma en un array de objetos que puede ser utilizado en la interfaz de usuario.
 
@@ -36,7 +36,7 @@ Para mostrar una imagen de usuario en la vista de usuario, la aplicación realiz
 
 ## Funcionamiento de las Rutas
 
-La aplicación utiliza un sistema de rutas en Angular que organiza la navegación de la siguiente manera:
+La aplicación utiliza un sistema de rutas de la siguiente manera:
 
 export const routes: Routes = [
   { path: '', component: MainComponent, children: [
@@ -48,7 +48,7 @@ export const routes: Routes = [
   { path: '**', component: NotFoundComponent }
 ];
 
-Ruta Principal (MainComponent): La ruta base (path: '') carga el MainComponent, que es un contenedor que incluye las secciones principales de la aplicación. Este componente contiene la barra de navegación que es compartida en varias páginas.
+Ruta Principal (MainComponent): La ruta base (path: '') carga el `MainComponent`, que es un contenedor que incluye las secciones principales de la aplicación. Este componente contiene la barra de navegación que es compartida en varias páginas. esta ruta esta ubicada en `AppComponent` para crear rutas futuras como las de administracion
 
 ### Subrutas:
 
