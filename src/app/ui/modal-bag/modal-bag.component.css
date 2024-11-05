@@ -102,6 +102,7 @@
     align-items: center;
     gap: 20px;
     border-radius: 20px;
+    justify-content: space-between;
     background: var(--Blanco, #FFF);
 }
 
