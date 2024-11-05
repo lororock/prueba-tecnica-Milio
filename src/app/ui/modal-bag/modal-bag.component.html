@@ -251,13 +251,13 @@
   </div>
   <div
     [ngClass]="{
-      'container-mobile__show': details,
-      'container-mobile__hidden': !details
+      'container-mobile__show': showDetails,
+      'container-mobile__hidden': !showDetails
     }"
   >
-    @if(details){
+    @if(showDetails){
     <div class="pedido-mobile__container">
-      <div class="hidden-info" (click)="hiddenDetails()">
+      <div class="hidden-info" (click)="toggleDetails()">
         <hr />
         <h4>Informacion del pedido</h4>
       </div>
@@ -305,7 +305,7 @@
           />
         </svg>
       </div>
-      <div class="button-container" (click)="showDetails()">
+      <div class="button-container" (click)="toggleDetails()">
         <div class="button-show">
           <p>Detalle del pedido</p>
         </div>

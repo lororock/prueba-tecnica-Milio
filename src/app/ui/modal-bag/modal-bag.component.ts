@@ -12,14 +12,12 @@ export class ModalBagComponent {
   @Output() openModalEvent = new EventEmitter<void>();
   @Output() closeModalEvent = new EventEmitter<void>();
 
-  public details: boolean = false;
+  public showDetails: boolean = false;
 
-  showDetails() {
-    this.details = true;
+  toggleDetails() {
+    this.showDetails = true;
   }
-  hiddenDetails() {
-    this.details = false;
-  }
+
 
   onCloseModal() {
     this.closeModalEvent.emit();
