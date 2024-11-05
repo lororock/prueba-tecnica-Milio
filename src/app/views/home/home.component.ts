@@ -26,9 +26,9 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent {
   public products: Product[] = [];
-  public showModal = false;
-  public showModalBag = false;
-  public showModalTicket = false;
+  public showModal: boolean = false;
+  public showModalBag: boolean = false;
+  public showModalTicket: boolean = false;
   public selectedProduct: Product | null = null;
   private subscription!: Subscription;
 

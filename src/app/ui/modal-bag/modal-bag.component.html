@@ -242,9 +242,15 @@
       </svg>
     </div>
   </div>
-  <div class="pedido-container__mobile">
+  <div
+    [ngClass]="{
+      'container-mobile__show': details,
+      'container-mobile__hidden': !details
+    }"
+  >
+    @if(details){
     <div class="pedido-mobile__container">
-      <div class="hidden-info">
+      <div class="hidden-info" (click)="hiddenDetails()">
         <hr />
         <h4>Informacion del pedido</h4>
       </div>
@@ -273,12 +279,31 @@
         </div>
       </div>
     </div>
+    } @else{
     <div class="show-pedido__container">
-      <div class="button-container">
+      <div class="back" (click)="onCloseModal()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+        >
+          <path
+            d="M12.5 23.75L3.75 15M3.75 15L12.5 6.25M3.75 15L26.25 15"
+            stroke="#222324"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="button-container" (click)="showDetails()">
         <div class="button-show">
-          <p>Detalle delpedido</p>
+          <p>Detalle del pedido</p>
         </div>
       </div>
     </div>
+    }
   </div>
 </div>

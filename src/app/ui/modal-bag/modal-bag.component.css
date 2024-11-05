@@ -197,8 +197,7 @@
         display: block;
     }
 }
-
-.pedido-container__mobile {
+.container-mobile__show {
     height: 100%;
     width: 100%;
     display: flex;
@@ -210,7 +209,22 @@
 }
 
 @media (min-width: 768px) {
-    .pedido-container__mobile {
+    .container-mobile__show {
+        display: none;
+    }
+}
+
+.container-mobile__hidden {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .container-mobile__hidden {
         display: none;
     }
 }
