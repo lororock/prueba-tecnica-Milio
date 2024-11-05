@@ -1,4 +1,4 @@
-# PruebaTecnicaMilio
+# Prueba Tecnica Milio
 
 Este es un proyecto realizado para una prueba tecnica en Milio `https://milio.com.co/` para desarrollador frontend Angular
 
