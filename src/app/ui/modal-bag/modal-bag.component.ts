@@ -15,7 +15,7 @@ export class ModalBagComponent {
   public showDetails: boolean = false;
 
   toggleDetails() {
-    this.showDetails = true;
+    this.showDetails = !this.showDetails
   }
 
 
