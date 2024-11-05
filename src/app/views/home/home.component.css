@@ -2,11 +2,6 @@
     margin: 0px 25px;
 }
 
-@media(min-width: 768px) {
-    body {
-        margin: 0;
-    }
-}
 
 .search-title {
     margin-top: 0;
@@ -60,8 +55,11 @@
     gap: 20px;
 }
 
+
 .categories-container::-webkit-scrollbar {
+    background: transparent;
     overflow: unset;
+    height: 0;
 }
 
 @media (min-width: 768px) {
@@ -124,9 +122,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
     margin-left: 0px;
     margin-right: 0px;
+    gap: 20px;
 }
 
 @media (min-width: 768px) {
