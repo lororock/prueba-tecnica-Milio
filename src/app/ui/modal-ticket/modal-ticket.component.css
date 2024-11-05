@@ -24,11 +24,6 @@
     display: none;
 }
 
-@media (min-width: 768px) {
-    .exit {
-        display: block;
-    }
-}
 
 .background {
     margin: 20px;

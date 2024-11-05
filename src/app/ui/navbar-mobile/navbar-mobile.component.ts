@@ -1,6 +1,8 @@
 import { Component, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { ModalService } from '@/app/core/services/modal.service';
+
 
 @Component({
   selector: 'app-navbar-mobile',
@@ -13,7 +15,7 @@ export class NavbarMobileComponent implements OnDestroy {
   isVisible = true;
   private activityTimeout: any;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private modalService: ModalService) {
     if (isPlatformBrowser(this.platformId)) {
       this.detectUserActivity();
     }
@@ -35,6 +37,10 @@ export class NavbarMobileComponent implements OnDestroy {
     this.activityTimeout = setTimeout(() => {
       this.isVisible = true;
     }, 500); // Ajusta el tiempo de inactividad aquí si lo deseas
+  }
+
+  openBagModal() {
+    this.modalService.triggerOpenModalBag();
   }
 
   ngOnDestroy(): void {

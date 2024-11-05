@@ -1,6 +1,7 @@
 <div [ngClass]="isVisible ? 'container' : 'container-out'">
   <nav class="nav">
     <ul class="nav-list">
+      <!-- home -->
       <li class="nav-item" routerLink="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -17,6 +18,7 @@
           />
         </svg>
       </li>
+      <!-- categoris -->
       <li
         class="nav-item"
         routerLink="categories"
@@ -38,9 +40,8 @@
           />
         </svg>
       </li>
-      <li
-        class="nav-item"
-      >
+      <!-- bag -->
+      <li class="nav-item" routerLink="/" (click)="openBagModal()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="31"
@@ -50,13 +51,14 @@
         >
           <path
             d="M20.75 14.25V9.25C20.75 7.92392 20.2232 6.65215 19.2855 5.71447C18.3479 4.77678 17.0761 4.25 15.75 4.25C14.4239 4.25 13.1521 4.77678 12.2145 5.71447C11.2768 6.65215 10.75 7.92392 10.75 9.25V14.25M7 11.75H24.5L25.75 26.75H5.75L7 11.75Z"
-            routerLinkActive="nav-item__active"
+            stroke="black"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
         </svg>
       </li>
+      <!-- perfil -->
       <li class="nav-item" routerLink="user">
         <svg
           xmlns="http://www.w3.org/2000/svg"
