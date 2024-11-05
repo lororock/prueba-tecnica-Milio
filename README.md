@@ -1,29 +1,74 @@
 # PruebaTecnicaMilio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+Este es un proyecto realizado para una prueba tecnica en Milio `https://milio.com.co/` para desarrollador frontend Angular
 
-## Development server
+## Descripción General
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto es una paguina con el diseño de e-commerce desarrollada con `Angular 18`. Utiliza `Server-Side Rendering (SSR)` para mejorar el rendimiento y el SEO, y sigue una Arquitectura Hexagonal para mantener un código modular, fácilmente escalable y desacoplado. Además, el proyecto cumple con los principios `SOLID para` asegurar que el código sea mantenible, flexible y robusto.
 
-## Code scaffolding
+## Arquitectura Hexagonal
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La aplicación sigue una `Arquitectura Hexagonal`, también conocida como arquitectura de puertos y adaptadores. Esta arquitectura permite que el código esté organizado en capas separadas que interactúan a través de interfaces, facilitando la sustitución de componentes sin afectar el resto de la aplicación.
 
-## Build
+En esta estructura:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ -`Capa de Dominio`: Contiene las reglas de negocio principales de la aplicación. Este es el "corazón" de la aplicación, sin dependencias externas.
 
-## Running unit tests
+ -Capa de Aplicación: Contiene los casos de uso de la aplicación, orquestando la interacción entre el dominio y las interfaces.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ -Adaptadores: Aquí se encuentran las implementaciones de los puertos que conectan el dominio con el mundo externo, como servicios de bases de datos, controladores de API y la interfaz de usuario (UI).
 
-## Running end-to-end tests
+Esta arquitectura ayuda a que la aplicación sea más modular y testeable, facilitando la incorporación de cambios sin afectar la estructura central.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Consumo de JSON Local
 
-## Further help
+Para cargar la información de los productos, la aplicación utiliza un archivo JSON local. Este enfoque permite cargar datos de manera rápida y eficiente durante el desarrollo y las pruebas. El archivo productos.json contiene un arreglo de objetos, cada uno representando un producto con atributos como id, nombre,tallas, precio, imagen, y descripción.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este JSON es consumido en el componente correspondiente a la lista de productos mediante un servicio que lee el archivo y lo transforma en un array de objetos que puede ser utilizado en la interfaz de usuario.
 
-![alt text](image.png)
+### Uso de Props para Categorías
+
+Para manejar las categorías de productos, se utiliza un array que se pasa como props a los componentes correspondientes. Este array se define en el componente padre y se distribuye entre los componentes hijos, permitiendo que cada componente tenga acceso a la información necesaria sobre las categorías, el componente `Category-card` recibe un array de categorías como propiedad de entrada, lo que permite que el componente se mantenga modular y reutilizable.
+
+### Llamada a API para Obtener un Usuario Aleatorio
+
+Para mostrar una imagen de usuario en la vista de usuario, la aplicación realiza una llamada a una API externa `https://randomuser.me/api/` que devuelve un usuario aleatorio. Esto se realiza utilizando el servicio HttpClient de Angular, que permite hacer solicitudes HTTP de manera sencilla.
+
+## Funcionamiento de las Rutas
+
+La aplicación utiliza un sistema de rutas en Angular que organiza la navegación de la siguiente manera:
+
+export const routes: Routes = [
+  { path: '', component: MainComponent, children: [
+    { path: '', component: HomeComponent },
+    { path: 'user', component: UserComponent },
+    { path: 'categories', component: CategoriesComponent },
+    // Se pueden agregar más rutas que requieran las barras de navegación
+  ]},
+  { path: '**', component: NotFoundComponent }
+];
+
+Ruta Principal (MainComponent): La ruta base (path: '') carga el MainComponent, que es un contenedor que incluye las secciones principales de la aplicación. Este componente contiene la barra de navegación que es compartida en varias páginas.
+
+### Subrutas:
+
+HomeComponent: Es la página de inicio, cargada en la ruta base (path: '') cuando el usuario ingresa a la aplicación.
+
+UserComponent: Accesible a través de path: 'user', lleva al perfil o ajustes del usuario.
+
+CategoriesComponent: Se muestra en path: 'categories' y lista las categorías de productos.
+
+Estas subrutas comparten la barra de navegación definida en MainComponent, permitiendo una navegación consistente en las secciones principales de la aplicación.
+
+### Ruta de Página No Encontrada (NotFoundComponent):
+
+{ path: '**', component: NotFoundComponent }: Esta ruta captura cualquier URL que no coincida con las rutas definidas y carga el NotFoundComponent, que generalmente muestra un mensaje de error de página no encontrada (404).
+Esta estructura de rutas permite que los usuarios naveguen fácilmente entre las secciones principales de la aplicación, con una ruta de error que asegura una experiencia fluida en caso de URLs incorrectas.
+
+## Despliegue en AWS
+
+La aplicación está desplegada en Amazon Web Services (AWS) usando los servicios de S3 y CloudFront:
+
+ -Amazon S3: Se utiliza como almacenamiento de archivos estáticos, lo que permite que los recursos sean servidos de manera eficiente y segura.
+
+ -Amazon CloudFront: Actúa como una CDN (Content Delivery Network) para distribuir el contenido globalmente, mejorando el tiempo de carga y la experiencia del usuario final.
