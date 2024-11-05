@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
+import { User, UserDetails } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,9 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getUserProfile(userId: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${userId}`);
+  async getUserProfile(): Promise<UserDetails> {
+    const {results} = await firstValueFrom(this.http.get<User>(`${this.apiUrl}`));
+    const [first] = results
+    return first;
   }
 }

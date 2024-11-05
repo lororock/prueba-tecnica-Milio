@@ -87,7 +87,6 @@ body {
     margin: 0px auto 65px;
     flex-shrink: 0;
     border-radius: 200px;
-    background-color: rgb(48, 6, 201);
 }
 
 @media (min-width: 768px) {
