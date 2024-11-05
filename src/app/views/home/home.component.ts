@@ -41,7 +41,7 @@ export class HomeComponent {
 
   ngOnInit() {
     this.subscription = this.ModalService.openModalBag$.subscribe(() => {
-      this.openModalBag();
+      this.toggleModalBag();
     });
     this.loadProducts();
   }
@@ -71,22 +71,18 @@ export class HomeComponent {
     this.selectedProduct = product;
     this.showModal = true;
   }
-  openModalBag() {
-    this.showModalBag = true;
-  }
-  openModalTicket(){
-    this.showModalTicket = true;
-  }
 
   closeModal() {
     this.showModal = false;
   }
-  closeModalBag() {
-    this.showModalBag = false;
+
+  toggleModalBag() {
+    this.showModalBag = !this.showModalBag;
   }
-  closeModalTicket(){
-    this.showModalTicket = false;
+  togglelTicket() {
+    this.showModalTicket = !this.showModalTicket;
   }
+
   ngOnDestroy() {
     if (this.subscription) {
       this.subscription.unsubscribe();
