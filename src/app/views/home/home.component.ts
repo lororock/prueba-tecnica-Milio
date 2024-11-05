@@ -5,7 +5,7 @@ import { CategoryCardComponent } from '@/app/shared/category-card/category-card.
 import { ProductCardComponent } from '@/app/shared/product-card/product-card.component';
 import { ProductService } from '@/app/core/services/product.service';
 import { ModalDescriptionComponent } from '@/app/shared/modal-description/modal-description.component';
-import { PopUpBagComponent } from '@/app/shared/pop-up-bag/pop-up-bag.component';
+import { ModalBagComponent } from '@/app/shared/pop-up-bag/modal-bag.component';
 import { ModalTicketComponent } from '@/app/ui/modal-ticket/modal-ticket.component';
 import { Product } from '@/app/core/models/product.model';
 import { Subscription } from 'rxjs';
@@ -18,7 +18,7 @@ import { Subscription } from 'rxjs';
     CategoryCardComponent,
     ProductCardComponent,
     ModalDescriptionComponent,
-    PopUpBagComponent,
+    ModalBagComponent,
     ModalTicketComponent,
   ],
   templateUrl: './home.component.html',

@@ -57,12 +57,16 @@
     } }
   </div>
   @if(showModal){
-  <modal-description [product]="selectedProduct" (closeModalEvent)="closeModal()" />
-  }
-  @if(showModalBag){
-    <pop-up-bag (closeModalEvent)="closeModalBag()" (openModalEvent)="openModalTicket()"/> 
-  }
-  @if(showModalTicket){
-    <app-modal-ticket (closeModalEvent)="closeModalTicket()" />
+  <modal-description
+    [product]="selectedProduct"
+    (closeModalEvent)="closeModal()"
+  />
+  } @if(showModalBag){
+  <modal-bag
+    (closeModalEvent)="closeModalBag()"
+    (openModalEvent)="openModalTicket()"
+  />
+  } @if(showModalTicket){
+  <app-modal-ticket (closeModalEvent)="closeModalTicket()" />
   }
 </div>

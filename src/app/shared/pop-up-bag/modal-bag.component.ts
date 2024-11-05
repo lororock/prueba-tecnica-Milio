@@ -1,13 +1,13 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'pop-up-bag',
+  selector: 'modal-bag',
   standalone: true,
   imports: [],
-  templateUrl: './pop-up-bag.component.html',
-  styleUrls: ['./pop-up-bag.component.css']
+  templateUrl: './modal-bag.component.html',
+  styleUrls: ['./modal-bag.component.css']
 })
-export class PopUpBagComponent {
+export class ModalBagComponent {
   @Output() openModalEvent = new EventEmitter<void>();
   @Output() closeModalEvent = new EventEmitter<void>();
 
