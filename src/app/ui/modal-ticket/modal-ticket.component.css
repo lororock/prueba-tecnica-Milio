@@ -74,6 +74,7 @@
 .info-pago {
     margin-top: 47px;
     display: flex;
+    justify-content: space-between;
     gap: 100px;
 }
 
@@ -89,6 +90,7 @@
 .info-pago__referencia {
     margin-top: 14.35px;
     display: flex;
+    justify-content: space-between;
     gap: 100px;
 }
 
@@ -105,6 +107,7 @@
     margin-top: 15.4px;
     display: flex;
     gap: 100px;
+    justify-content: space-between;
 }
 
 .info-pago__total h4 {
