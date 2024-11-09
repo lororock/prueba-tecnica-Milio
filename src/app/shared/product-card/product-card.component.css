@@ -53,6 +53,18 @@
     font-weight: 500;
     line-height: 16px;
 }
-.info-container svg{
+
+.info-container svg {
     padding-right: 10px;
+}
+
+.like {
+    cursor: pointer;
+    fill: #F26F3F;
+}
+
+.notLike {
+    cursor: pointer;
+    fill: none;
+
 }

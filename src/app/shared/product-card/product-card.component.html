@@ -6,10 +6,11 @@
       <p class="price-item">{{ price }}$</p>
     </div>
     <svg
+      (click)="addFav()"
       width="30"
       height="30"
       viewBox="0 0 30 30"
-      fill="none"
+      [ngClass]="like ? 'like' : 'notLike'"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
