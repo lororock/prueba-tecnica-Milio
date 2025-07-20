@@ -67,7 +67,7 @@
               </h2>
               <div class="price">
                 {{ product?.price }}$
-                <div>/ Talla S</div>
+                <div>/ Talla {{ selectedSize }}</div>
               </div>
             </div>
             <div class="iconst-contain">
@@ -96,9 +96,10 @@
               @for(talla of product?.tallas; track [] ){
               <div
                 [ngClass]="{
-                  'item-talla__active': product?.tallas[0] === talla,
-                  'item-talla': product?.tallas[0] !== talla
+                  'item-talla__active': selectedSize === talla,
+                  'item-talla': selectedSize !== talla
                 }"
+                (click)="selectSize(talla)"
               >
                 <p>{{ talla }}</p>
               </div>

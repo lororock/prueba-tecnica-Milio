@@ -1,6 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { selectCounter } from '../../store/app.store';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'keyword-search',
@@ -9,12 +7,11 @@ import { selectCounter } from '../../store/app.store';
   templateUrl: './keyword-search.component.html',
   styleUrls: ['./keyword-search.component.css']
 })
-export class KeywordSearchComponent implements OnInit {
-  private store = inject(Store);
+export class KeywordSearchComponent {
+  @Output() searchChange = new EventEmitter<string>();
 
-  ngOnInit(): void {
-    this.store.select(selectCounter).subscribe((counter) => {
-      console.log('Valor de counter desde el store:', counter);
-    });
+  onInput(event: Event){
+    const value = (event.target as HTMLInputElement).value;
+    this.searchChange.emit(value);
   }
 }

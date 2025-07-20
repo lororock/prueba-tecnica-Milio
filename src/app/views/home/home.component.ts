@@ -26,6 +26,7 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent {
   public products: Product[] = [];
+  private allProducts: Product[] = [];
   public showModal: boolean = false;
   public showModalBag: boolean = false;
   public showModalTicket: boolean = false;
@@ -50,11 +51,21 @@ export class HomeComponent {
     this.productService.getProducts().subscribe({
       next: (products) => {
         this.products = products;
+        this.allProducts = products;
       },
       error: (err) => {
         console.error('Error loading products:', err);
       },
     });
+  }
+
+  filterProducts(term: string) {
+    if (!term) {
+      this.products = this.allProducts;
+      return;
+    }
+    const lower = term.toLowerCase();
+    this.products = this.allProducts.filter(p => p.name.toLowerCase().includes(lower));
   }
 
   categories = [

@@ -17,7 +17,12 @@ export class ModalDescriptionComponent implements OnInit {
 
   private store = inject(Store);
 
+  selectedSize: string | null = null;
+
   ngOnInit(): void {
+    if (this.product) {
+      this.selectedSize = this.product.tallas?.[0] ?? null;
+    }
     // Log the current bag content every time it changes
     this.store.select(selectBag).subscribe((bag) => {
       console.log('Productos en la bolsa:', bag);
@@ -25,9 +30,14 @@ export class ModalDescriptionComponent implements OnInit {
   }
 
   addToBag(): void {
-    if (this.product) {
-      this.store.dispatch(addToBag(this.product));
+    if (this.product && this.selectedSize) {
+      this.store.dispatch(addToBag(this.product, this.selectedSize));
+      this.onCloseModal();
     }
+  }
+
+  selectSize(talla: string) {
+    this.selectedSize = talla;
   }
 
   onCloseModal() {
