@@ -13,18 +13,31 @@
 }
 
 .imagen {
-    width: 166px;
-    height: 166px;
+    width: 133px;
+    height: 133px;
     flex-shrink: 0;
     border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+    .imagen {
+        width: 166px;
+        height: 166px;
+    }
 }
 
 .info-container {
     display: flex;
     padding-bottom: 4px;
-    width: 168px;
+    width: 127px;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (min-width: 768px) {
+    .info-container {
+        width: 168px;
+    }
 }
 
 .info-item {

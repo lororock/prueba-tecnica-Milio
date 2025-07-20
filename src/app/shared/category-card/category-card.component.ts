@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'category-card',
@@ -11,4 +11,10 @@ import { Component, Input } from '@angular/core';
 export class CategoryCardComponent {
   @Input() icon: string = '';
   @Input() text: string = '';
+  @Input() selected: boolean = false;
+  @Output() select = new EventEmitter<void>();
+
+  handleClick(){
+    this.select.emit();
+  }
 }

@@ -78,6 +78,13 @@ export class HomeComponent {
     { id: 7, icon: '👓', text: 'Gafas' },
   ];
 
+  selectedCategoryId: number = 1; // first selected by default
+
+  selectCategory(id: number) {
+    this.selectedCategoryId = id;
+    // If product filtering by category needed, implement here
+  }
+
   openModal(product: Product) {
     this.selectedProduct = product;
     this.showModal = true;

@@ -5,7 +5,11 @@
   <h4 class="categories">Categorías</h4>
   <div class="categories-container">
     @for(category of categories; track category.id){
-    <category-card [icon]="category.icon" [text]="category.text" />
+    <category-card 
+      [icon]="category.icon" 
+      [text]="category.text" 
+      [selected]="category.id === selectedCategoryId" 
+      (select)="selectCategory(category.id)" />
     }
   </div>
 

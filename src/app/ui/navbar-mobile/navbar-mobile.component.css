@@ -1,10 +1,11 @@
 .container {
-    display: block;
+    display: flex;
     position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 25px;
     color: #fff;
     opacity: 1;
@@ -28,8 +29,8 @@
 
 .nav {
     display: flex;
-    width: 392px;
-    height: 97px;
+    width: 330px;
+    height: 72px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -44,7 +45,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 56px;
     font-size: 0.875rem;
     list-style: none;
 }

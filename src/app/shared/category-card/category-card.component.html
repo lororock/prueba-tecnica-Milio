@@ -1,4 +1,4 @@
-<div [ngClass]="{ 'container-active': text === 'Ropa', 'container': text !== 'Ropa' }">
+<div [ngClass]="{ 'container-active': selected, 'container': !selected }" (click)="handleClick()">
   <div class="icon-container">
     <p>{{ icon }}</p>
   </div>
