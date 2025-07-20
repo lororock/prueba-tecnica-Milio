@@ -3,6 +3,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideStore } from '@ngrx/store';
+import { globalReducer } from './store/app.store';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -10,5 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(withFetch()),
+    provideStore({ global: globalReducer }),
   ],
 };
