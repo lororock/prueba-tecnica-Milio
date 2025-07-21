@@ -31,6 +31,7 @@ export class HomeComponent {
   public showModalBag: boolean = false;
   public showModalTicket: boolean = false;
   public selectedProduct: Product | null = null;
+  public ticketTotal: number = 0;
   private subscription!: Subscription;
 
   constructor(
@@ -99,6 +100,11 @@ export class HomeComponent {
   }
   togglelTicket() {
     this.showModalTicket = !this.showModalTicket;
+  }
+
+  openTicket(total: number){
+    this.ticketTotal = total;
+    this.showModalTicket = true;
   }
 
   ngOnDestroy() {

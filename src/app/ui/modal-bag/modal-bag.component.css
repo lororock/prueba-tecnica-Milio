@@ -35,11 +35,26 @@
     top: 35px;
     left: 46px;
     cursor: pointer;
+    display: none;
 }
 
 @media (min-width: 768px) {
     .back {
         display: block;
+    }
+}
+
+.back-mobile {
+    position: absolute;
+    top: 35px;
+    left: 46px;
+    cursor: pointer;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .back-mobile {
+        display: none;
     }
 }
 

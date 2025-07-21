@@ -68,9 +68,9 @@
   } @if(showModalBag){
   <modal-bag
     (closeModalEvent)="toggleModalBag()"
-    (openModalEvent)="togglelTicket()"
+    (openModalEvent)="openTicket($event)"
   />
   } @if(showModalTicket){
-  <app-modal-ticket (closeModalEvent)="togglelTicket()" />
+  <app-modal-ticket [total]="ticketTotal" (closeModalEvent)="togglelTicket()" />
   }
 </div>

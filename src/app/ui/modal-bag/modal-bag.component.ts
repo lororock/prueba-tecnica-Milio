@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { selectBag, addToBag, removeFromBag, BagItem } from '../../store/app.store';
-import { map, combineLatest } from 'rxjs';
+import { map, combineLatest, take } from 'rxjs';
 
 @Component({
   selector: 'modal-bag',
@@ -12,7 +12,7 @@ import { map, combineLatest } from 'rxjs';
   styleUrls: ['./modal-bag.component.css'],
 })
 export class ModalBagComponent {
-  @Output() openModalEvent = new EventEmitter<void>();
+  @Output() openModalEvent = new EventEmitter<number>();
   @Output() closeModalEvent = new EventEmitter<void>();
 
   public showDetails: boolean = false;
@@ -42,7 +42,9 @@ export class ModalBagComponent {
     this.closeModalEvent.emit();
   }
   onOpenModal() {
-    this.openModalEvent.emit();
-    this.onCloseModal();
+    this.total$.pipe(take(1)).subscribe(total => {
+      this.openModalEvent.emit(total);
+      this.onCloseModal();
+    });
   }
 }

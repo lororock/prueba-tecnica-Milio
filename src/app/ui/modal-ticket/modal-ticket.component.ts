@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal-ticket',
@@ -9,6 +9,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ModalTicketComponent {
   @Output() closeModalEvent = new EventEmitter<void>();
+  @Input() total: number = 0;
 
   onCloseModal() {
     this.closeModalEvent.emit();
