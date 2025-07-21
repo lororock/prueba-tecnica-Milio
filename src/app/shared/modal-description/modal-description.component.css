@@ -47,6 +47,18 @@
     }
 }
 
+@media (max-width: 767px) {
+    .background {
+        width: 100%;
+        min-width: unset;       /* allow shrink */
+        height: auto;
+        max-height: 90vh;       /* keep some space */
+        overflow-y: auto;       /* enable scroll */
+        flex-direction: column; /* stack elements */
+        padding-bottom: 20px;   /* avoid last element overlap */
+    }
+}
+
 .img-info {
     display: flex;
     flex-direction: column;
@@ -63,8 +75,8 @@
 .img {
     margin: 25px auto 0px auto;
     display: flex;
-    width: 412px;
-    height: 485px;
+    width: auto;  /* No se reduce más allá de la mitad */
+    height: 485px;          /* Altura fija */
     justify-content: space-between;
     flex-direction: row;
     align-items: flex-end;
@@ -74,6 +86,7 @@
     background-size: cover;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.90) 100%);
     background-size: cover;
+    overflow: auto;
 }
 
 @media (min-width: 768px) {
@@ -196,9 +209,9 @@
 
 .info {
     display: flex;
-    width: 412px;
+    width: 349px;
     height: 343px;
-    padding: 0px 45px;
+    padding: 0px 0px;
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
@@ -209,7 +222,7 @@
     .info {
         margin: 0;
         width: 462px;
-
+        padding: 0px 45px;
     }
 }
 
@@ -264,19 +277,37 @@
     }
 }
 
+.text-description-container {
+    overflow: auto;
+    margin: 15px 0px;
+}
+
+@media (min-width: 768px) {
+    .text-description-container {
+        margin: 0px 0px;
+    }
+}
+
 .text-description {
     user-select: none;
     margin: 0;
     margin-top: 20px;
     color: var(--Gris-Icon, #888);
     font-size: 16px;
-    width: 412px;
+    width: auto;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0.15px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+    .text-description {
+        width: 412px;
+        overflow: auto;
+    }
 }
 
 .tallas-container {
@@ -312,8 +343,8 @@
 .item-talla__active {
     display: flex;
     cursor: pointer;
-    width: 35px;
-    height: 50px;
+    width: 25px;
+    height: 35px;
     padding: 5px;
     justify-content: center;
     align-items: center;
@@ -323,11 +354,18 @@
     background: #61E27D;
 }
 
+@media (min-width: 768px) {
+    .item-talla__active {
+        width: 35px;
+        height: 50px;
+    }
+}
+
 .item-talla {
     display: flex;
     cursor: pointer;
-    width: 35px;
-    height: 50px;
+    width: 25px;
+    height: 35px;
     padding: 5px;
     justify-content: center;
     align-items: center;
@@ -335,6 +373,13 @@
     flex-shrink: 0;
     border-radius: 10px;
     background: #fff;
+}
+
+@media (min-width: 768px) {
+    .item-talla {
+        width: 35px;
+        height: 50px;
+    }
 }
 
 .item-talla:hover {
@@ -345,23 +390,36 @@
     user-select: none;
     color: #FFF;
     text-align: center;
-    font-size: 24px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.24px;
 }
 
+@media (min-width: 768px) {
+    .item-talla__active p {
+        font-size: 24px;
+    }
+}
+
 .item-talla p {
     user-select: none;
     color: #000;
     text-align: center;
-    font-size: 24px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.24px;
 }
+
+@media (min-width: 768px) {
+    .item-talla p {
+        font-size: 24px;
+    }
+}
+
 
 .item-talla:hover p {
     color: #fff;
@@ -387,8 +445,8 @@
 .select-color {
     display: flex;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     padding: 10px;
     flex-direction: column;
     justify-content: center;
@@ -399,16 +457,29 @@
     background: var(--Blanco, #FFF);
 }
 
+@media (min-width: 768px) {
+    .select-color {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 .select-color p {
     user-select: none;
     margin: 0;
     color: #000;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
     letter-spacing: 0.24px;
+}
+
+@media (min-width: 768px) {
+    .select-color p {
+        font-size: 24px;
+    }
 }
 
 .buttons {

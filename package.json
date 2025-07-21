@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "start:host": "ng serve --host 0.0.0.0 --port 4200",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:pruebaTecnicaMilio": "node dist/prueba-tecnica-milio/server/server.mjs"

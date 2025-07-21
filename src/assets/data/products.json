@@ -12,9 +12,9 @@
     "id": 2,
     "name": "Adidas",
     "fullName": "Zapatos adidas",
-    "description": "Descripción del producto 2",
+    "description": " Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. ads kjahflkj hdakl;fjhs dlkfjhalk sjdhflk ajshdlkfj haslkjdf hlkasj hdflkjsah dlfkjhasl kdjfhlaksjhd flkjahs dlkfjhaslk djhflkasjhd flkajsh dlkfjhaskld bfjasnbd kfljaweliuhfla kweujfbnklwjebf lawejfb walkjefb lkawjebf lkwajbe flkwajbe lkfjbawlk ejfblkaws ejbfwalkj belkfjabwl ekfjbawlkej bflkawje bhflkwajbe flkwajbe flkawjbe lfkjwabelkf jawbelk fjbwalkej fbalwkejb flawkje fbwlakej bflakwjeb flkwajeb flwakje bflkwaje bf ",
     "tallas": ["8", "9", "9.5", "10"],
-    "price": 300,
+    "price": 350,
     "imageUrl": "img/products/item-2.svg"
   },
   {
@@ -23,7 +23,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 120,
     "imageUrl": "img/products/item-3.svg"
   },
   {
@@ -32,7 +32,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["8", "9", "9.5", "10"],
-    "price": 300,
+    "price": 220,
     "imageUrl": "img/products/item-4.svg"
   },
   {
@@ -41,7 +41,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 180,
     "imageUrl": "img/products/item-5.svg"
   },
   {
@@ -50,7 +50,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 170,
     "imageUrl": "img/products/item-6.svg"
   },
   {
@@ -68,7 +68,7 @@
     "fullName": "Zapatos adidas",
     "description": "Descripción del producto 2",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 243,
     "imageUrl": "img/products/item-2.svg"
   },
   {
@@ -77,7 +77,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 420,
     "imageUrl": "img/products/item-3.svg"
   },
   {
@@ -86,7 +86,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 310,
     "imageUrl": "img/products/item-4.svg"
   },
   {
@@ -95,7 +95,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 460,
     "imageUrl": "img/products/item-5.svg"
   },
   {
@@ -104,7 +104,7 @@
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 192,
     "imageUrl": "img/products/item-6.svg"
   },
   {
@@ -122,7 +122,7 @@
     "fullName": "Zapatos adidas",
     "description": "Descripción del producto 2",
     "tallas": ["S", "M", "L", "XL"],
-    "price": 300,
+    "price": 260,
     "imageUrl": "img/products/item-2.svg"
   }
 ]
