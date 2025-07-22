@@ -6,4 +6,5 @@ export interface Product {
     tallas: any;
     price: number;
     imageUrl: string;
+    category: string;
   }

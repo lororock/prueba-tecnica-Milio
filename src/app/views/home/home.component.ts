@@ -27,6 +27,7 @@ import { Subscription } from 'rxjs';
 export class HomeComponent {
   public products: Product[] = [];
   private allProducts: Product[] = [];
+  private searchTerm: string = '';
   public showModal: boolean = false;
   public showModalBag: boolean = false;
   public showModalTicket: boolean = false;
@@ -61,12 +62,22 @@ export class HomeComponent {
   }
 
   filterProducts(term: string) {
-    if (!term) {
-      this.products = this.allProducts;
-      return;
+    this.searchTerm = term.toLowerCase();
+    this.applyFilters();
+  }
+
+  private applyFilters(){
+    let filtered = this.allProducts;
+    // category filter
+    const categoryText = this.categories.find(c=>c.id===this.selectedCategoryId)?.text;
+    if(categoryText){
+      filtered = filtered.filter(p=>p.category===categoryText);
     }
-    const lower = term.toLowerCase();
-    this.products = this.allProducts.filter(p => p.name.toLowerCase().includes(lower));
+    // search filter
+    if(this.searchTerm){
+      filtered = filtered.filter(p=>p.name.toLowerCase().includes(this.searchTerm));
+    }
+    this.products = filtered;
   }
 
   categories = [
@@ -79,11 +90,12 @@ export class HomeComponent {
     { id: 7, icon: '👓', text: 'Gafas' },
   ];
 
-  selectedCategoryId: number = 1; // first selected by default
+  selectedCategoryId: number = 0; // none selected by default
 
   selectCategory(id: number) {
-    this.selectedCategoryId = id;
-    // If product filtering by category needed, implement here
+    // If clicking the currently selected category, deselect (id 0)
+    this.selectedCategoryId = (this.selectedCategoryId === id) ? 0 : id;
+    this.applyFilters();
   }
 
   openModal(product: Product) {

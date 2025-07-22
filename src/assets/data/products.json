@@ -6,7 +6,8 @@
     "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
     "tallas": ["S", "M", "L", "XL"],
     "price": 40,
-    "imageUrl": "img/logos/item-1.svg"
+    "imageUrl": "img/logos/item-1.svg",
+    "category": "Ropa"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "description": " Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. ads kjahflkj hdakl;fjhs dlkfjhalk sjdhflk ajshdlkfj haslkjdf hlkasj hdflkjsah dlfkjhasl kdjfhlaksjhd flkjahs dlkfjhaslk djhflkasjhd flkajsh dlkfjhaskld bfjasnbd kfljaweliuhfla kweujfbnklwjebf lawejfb walkjefb lkawjebf lkwajbe flkwajbe lkfjbawlk ejfblkaws ejbfwalkj belkfjabwl ekfjbawlkej bflkawje bhflkwajbe flkwajbe flkawjbe lfkjwabelkf jawbelk fjbwalkej fbalwkejb flawkje fbwlakej bflakwjeb flkwajeb flwakje bflkwaje bf ",
     "tallas": ["8", "9", "9.5", "10"],
     "price": 350,
-    "imageUrl": "img/products/item-2.svg"
+    "imageUrl": "img/products/item-2.svg",
+    "category": "Ropa"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 120,
-    "imageUrl": "img/products/item-3.svg"
+    "imageUrl": "img/products/item-3.svg",
+    "category": "Ropa"
   },
   {
     "id": 4,
@@ -33,16 +36,18 @@
     "description": "Descripción del producto 3",
     "tallas": ["8", "9", "9.5", "10"],
     "price": 220,
-    "imageUrl": "img/products/item-4.svg"
+    "imageUrl": "img/products/item-4.svg",
+    "category": "Deporte"
   },
   {
     "id": 5,
     "name": "Nike",
     "fullName": "Camiseta básica",
     "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": ["8", "9", "9.5", "10"],
     "price": 180,
-    "imageUrl": "img/products/item-5.svg"
+    "imageUrl": "img/products/item-5.svg",
+    "category": "Ropa"
   },
   {
     "id": 6,
@@ -51,78 +56,87 @@
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 170,
-    "imageUrl": "img/products/item-6.svg"
+    "imageUrl": "img/products/item-6.svg",
+    "category": "Ropa"
   },
   {
     "id": 7,
-    "name": "Camisas",
-    "fullName": "Camiseta básica",
+    "name": "Balon",
+    "fullName": "Balon volleyball",
     "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [],
     "price": 40,
-    "imageUrl": "img/logos/item-1.svg"
+    "imageUrl": "img/products/item-7.webp",
+    "category": "Deporte"
   },
   {
     "id": 8,
-    "name": "Adidas",
-    "fullName": "Zapatos adidas",
+    "name": "Patines",
+    "fullName": "Patines negros",
     "description": "Descripción del producto 2",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": ["8", "9", "9.5", "10"],
     "price": 243,
-    "imageUrl": "img/products/item-2.svg"
+    "imageUrl": "img/products/item-8.webp",
+    "category": "Deporte"
   },
   {
     "id": 9,
-    "name": "Camisas",
-    "fullName": "Camiseta básica",
+    "name": "Bolso",
+    "fullName": "Bolso básico",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 420,
-    "imageUrl": "img/products/item-3.svg"
+    "imageUrl": "img/products/item-9.webp",
+    "category": "Maletas"
   },
   {
     "id": 10,
-    "name": "Adidas",
-    "fullName": "Camiseta básica",
+    "name": "Xbox",
+    "fullName": "Tarjeta de regalo",
     "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [],
     "price": 310,
-    "imageUrl": "img/products/item-4.svg"
+    "imageUrl": "img/products/item-10.webp",
+    "category": "Regalos"
   },
   {
     "id": 11,
-    "name": "Nike",
-    "fullName": "Camiseta básica",
+    "name": "Arbol",
+    "fullName": "Arbol de navidad",
     "description": "Descripción del producto 3",
     "tallas": ["S", "M", "L", "XL"],
     "price": 460,
-    "imageUrl": "img/products/item-5.svg"
+    "imageUrl": "img/products/item-11.webp",
+    "category": "Navidad"
   },
   {
     "id": 12,
-    "name": "Correas",
-    "fullName": "Camiseta básica",
+    "name": "Mario",
+    "fullName": "Mario Kart",
     "description": "Descripción del producto 3",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [],
     "price": 192,
-    "imageUrl": "img/products/item-6.svg"
+    "imageUrl": "img/products/item-12.webp",
+    "category": "Juegos"
   },
   {
     "id": 13,
-    "name": "Camisas",
-    "fullName": "Camiseta básica",
+    "name": "Gafas",
+    "fullName": "Gafas de sol",
     "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
-    "tallas": ["S", "M", "L", "XL"],
+    "tallas": [],
     "price": 40,
-    "imageUrl": "img/logos/item-1.svg"
+    "imageUrl": "img/products/item-13.webp",
+    "category": "Gafas"
   },
   {
     "id": 14,
-    "name": "Adidas",
-    "fullName": "Zapatos adidas",
-    "description": "Descripción del producto 2",
+    "name": "Pantalon",
+    "fullName": "Pantalon straight",
+    "description": "Descripción del producto ",
     "tallas": ["S", "M", "L", "XL"],
     "price": 260,
-    "imageUrl": "img/products/item-2.svg"
+    "imageUrl": "img/products/item-14.webp",
+    "category": "Ropa"
   }
 ]
