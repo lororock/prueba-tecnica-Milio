@@ -3,6 +3,7 @@ import { Product } from '@/app/core/models/product.model';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { addToBag, selectBag } from '../../store/app.store';
+import  Swal  from 'sweetalert2';
 
 @Component({
   selector: 'modal-description',
@@ -33,6 +34,21 @@ export class ModalDescriptionComponent implements OnInit {
     if (this.product && this.selectedSize) {
       this.store.dispatch(addToBag(this.product, this.selectedSize));
       this.onCloseModal();
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast: any) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Producto agregado a la bolsa"
+      });
     }
   }
 
