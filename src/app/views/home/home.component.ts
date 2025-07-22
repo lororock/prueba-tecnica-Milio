@@ -9,6 +9,10 @@ import { ModalBagComponent } from '@/app/ui/modal-bag/modal-bag.component';
 import { ModalTicketComponent } from '@/app/ui/modal-ticket/modal-ticket.component';
 import { Product } from '@/app/core/models/product.model';
 import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { selectBag } from '../../store/app.store';
+import { take } from 'rxjs';
+import  Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -37,7 +41,8 @@ export class HomeComponent {
 
   constructor(
     private ModalService: ModalService,
-    private productService: ProductService
+    private productService: ProductService,
+    private store: Store
   ) {
     this.loadProducts();
   }
@@ -108,7 +113,33 @@ export class HomeComponent {
   }
 
   toggleModalBag() {
-    this.showModalBag = !this.showModalBag;
+    if (!this.showModalBag) {
+      // Trying to open – check if bag has items
+      this.store.select(selectBag).pipe(take(1)).subscribe(bag => {
+        if (bag.length > 0) {
+          this.showModalBag = true;
+        } else {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast: any) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            }
+          });
+          Toast.fire({
+            icon: "error",
+            title: "Bolsa sin productos"
+          });
+         }
+       });
+    } else {
+      // closing
+      this.showModalBag = false;
+    }
   }
   togglelTicket() {
     this.showModalTicket = !this.showModalTicket;

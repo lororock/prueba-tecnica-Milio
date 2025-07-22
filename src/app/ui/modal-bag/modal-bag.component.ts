@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { selectBag, addToBag, removeFromBag, BagItem, clearBag } from '../../store/app.store';
 import { map, combineLatest, take } from 'rxjs';
+import  Swal  from 'sweetalert2';
 
 @Component({
   selector: 'modal-bag',
@@ -18,6 +19,29 @@ export class ModalBagComponent {
   public showDetails: boolean = false;
 
   private store = inject(Store);
+  constructor(){
+    // close modal when bag becomes empty
+    this.bag$.subscribe(bag=>{
+      if(bag.length===0){
+        this.onCloseModal();
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast: any) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "error",
+          title: "Bolsa sin productos"
+        });
+      }
+    });
+  }
 
   bag$ = this.store.select(selectBag);
   productsCount$ = this.bag$.pipe(map((bag) => bag.reduce((acc, item) => acc + item.quantity, 0)));

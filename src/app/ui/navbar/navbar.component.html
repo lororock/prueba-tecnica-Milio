@@ -25,7 +25,7 @@
         <ul class="nav-list">
           <li class="nav-item" routerLink="/" routerLinkActive="nav-item__active" [routerLinkActiveOptions]="{ exact: true }">Inicio</li>
           <li class="nav-item" routerLink="categories" routerLinkActive="nav-item__active">Categorias</li>
-          <li class="nav-item" routerLink="/" (click)="openBagModal()">Bolsa</li>
+          <li class="nav-item" routerLink="/" (click)="openBagModal()" [ngClass]="{ 'nav-item-disabled': bagEmpty }">Bolsa</li>
           <li class="nav-item" routerLink="user" routerLinkActive="nav-item__active">Perfil</li>
         </ul>
       </nav>
