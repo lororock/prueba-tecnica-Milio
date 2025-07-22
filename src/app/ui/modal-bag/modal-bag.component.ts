@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
-import { selectBag, addToBag, removeFromBag, BagItem } from '../../store/app.store';
+import { selectBag, addToBag, removeFromBag, BagItem, clearBag } from '../../store/app.store';
 import { map, combineLatest, take } from 'rxjs';
 
 @Component({
@@ -44,6 +44,7 @@ export class ModalBagComponent {
   onOpenModal() {
     this.total$.pipe(take(1)).subscribe(total => {
       this.openModalEvent.emit(total);
+      this.store.dispatch(clearBag());
       this.onCloseModal();
     });
   }

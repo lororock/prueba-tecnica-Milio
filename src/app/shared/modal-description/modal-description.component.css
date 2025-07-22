@@ -148,6 +148,7 @@
 
 .img-info__container {
     position: relative;
+    width: 90%;
 }
 
 .fav-img {

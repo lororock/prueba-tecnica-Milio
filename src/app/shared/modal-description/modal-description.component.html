@@ -70,7 +70,7 @@
                 <div>/Talla {{ selectedSize }}</div>
               </div>
             </div>
-            <div class="iconst-contain">
+            <div class="iconst-contain" *ngIf="product?.id === 1">
               <div
                 class="img-icons"
                 [style.background-image]="'url(  img/products/item-1.svg  )'"

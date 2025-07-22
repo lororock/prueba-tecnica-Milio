@@ -27,6 +27,7 @@ export const initialState: GlobalState = {
 
 export const addToBag = createAction('[Global] Add To Bag', (product: Product, size: string) => ({ product, size }));
 export const removeFromBag = createAction('[Global] Remove From Bag', (productId: number, size: string) => ({ productId, size }));
+export const clearBag = createAction('[Global] Clear Bag');
 
 // ---------------------------
 // Reducer
@@ -58,7 +59,8 @@ export const globalReducer = createReducer(
       };
     }
     return { ...state, bag: state.bag.filter((item) => !(item.product.id === productId && item.size === size)) };
-  })
+  }),
+  on(clearBag, (state): GlobalState => ({ ...state, bag: [] }))
 );
 
 // ---------------------------
