@@ -195,6 +195,11 @@
     gap: 20px;
 }
 
+.num-products div {
+    cursor: pointer;
+    display: flex;
+}
+
 .num-products p {
     margin: 0;
     color: #000;
