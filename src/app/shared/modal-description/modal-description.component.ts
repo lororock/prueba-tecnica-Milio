@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { addToBag, selectBag } from '../../store/app.store';
 import  Swal  from 'sweetalert2';
+import { ModalService } from '@/app/core/services/modal.service';
 
 @Component({
   selector: 'modal-description',
@@ -17,6 +18,7 @@ export class ModalDescriptionComponent implements OnInit {
   @Output() closeModalEvent = new EventEmitter<void>();
 
   private store = inject(Store);
+  private modalSvc = inject(ModalService);
 
   selectedSize: string | null = null;
 
@@ -34,6 +36,8 @@ export class ModalDescriptionComponent implements OnInit {
     if (this.product && this.selectedSize) {
       this.store.dispatch(addToBag(this.product, this.selectedSize));
       this.onCloseModal();
+      // open bag modal
+      this.modalSvc.triggerOpenModalBag();
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",

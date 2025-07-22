@@ -64,7 +64,7 @@
     "name": "Balon",
     "fullName": "Balon volleyball",
     "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
-    "tallas": [],
+    "tallas": ["U"],
     "price": 40,
     "imageUrl": "img/products/item-7.webp",
     "category": "Deporte"
@@ -94,7 +94,7 @@
     "name": "Xbox",
     "fullName": "Tarjeta de regalo",
     "description": "Descripción del producto 3",
-    "tallas": [],
+    "tallas": ["U"],
     "price": 310,
     "imageUrl": "img/products/item-10.webp",
     "category": "Regalos"
@@ -114,7 +114,7 @@
     "name": "Mario",
     "fullName": "Mario Kart",
     "description": "Descripción del producto 3",
-    "tallas": [],
+    "tallas": ["U"],
     "price": 192,
     "imageUrl": "img/products/item-12.webp",
     "category": "Juegos"
@@ -124,7 +124,7 @@
     "name": "Gafas",
     "fullName": "Gafas de sol",
     "description": "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.",
-    "tallas": [],
+    "tallas": ["U"],
     "price": 40,
     "imageUrl": "img/products/item-13.webp",
     "category": "Gafas"

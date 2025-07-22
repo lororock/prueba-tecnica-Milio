@@ -218,25 +218,20 @@
         display: block;
     }
 }
-.container-mobile__show {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: absolute;
-    background: rgba(198, 198, 198, 0.15);
-    backdrop-filter: blur(3px);
-}
-
-@media (min-width: 768px) {
-    .container-mobile__show {
-        display: none;
+@media (max-width: 767px) {
+    .container-mobile__show,
+    .container-mobile__hidden {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        justify-content: flex-end;
     }
 }
 
 .container-mobile__hidden {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;

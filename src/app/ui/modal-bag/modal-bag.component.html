@@ -1,6 +1,23 @@
 <div class="container">
   <div class="background">
     <div class="exit-container">
+      <div class="back-mobile" (click)="onCloseModal()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+        >
+          <path
+            d="M12.5 23.75L3.75 15M3.75 15L12.5 6.25M3.75 15L26.25 15"
+            stroke="#222324"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
       <div class="exit" (click)="onCloseModal()">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -173,23 +190,6 @@
     </div>
     } @else{
     <div class="show-pedido__container">
-      <div class="back-mobile" (click)="onCloseModal()">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-        >
-          <path
-            d="M12.5 23.75L3.75 15M3.75 15L12.5 6.25M3.75 15L26.25 15"
-            stroke="#222324"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
       <div class="button-container" (click)="toggleDetails()">
         <div class="button-show">
           <p>Detalle del pedido</p>
