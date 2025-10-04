@@ -125,6 +125,28 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    max-height: 300px; /* Altura fija para aproximadamente 3 productos */
+    overflow-y: auto; /* Scroll vertical cuando el contenido excede la altura */
+    padding-right: 5px; /* Espacio para la barra de scroll */
+}
+
+/* Estilos para la barra de scroll */
+.products-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.products-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.products-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
 }
 
 .product-img {
