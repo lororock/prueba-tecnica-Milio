@@ -4,7 +4,7 @@
     display: flex;
     width: 140px;
     padding: 10px 20px 10px 10px;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
     border-radius: 20px;
     background: #FFF;
@@ -17,7 +17,7 @@
     display: flex;
     width: 140px;
     padding: 10px 20px 10px 10px;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
     border-radius: 20px;
     background: #F2F2F2;
@@ -28,7 +28,6 @@
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.08);
     border: none;
     background: #FFF;
-
 }
 
 .icon-container {

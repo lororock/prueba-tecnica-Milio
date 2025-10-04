@@ -151,9 +151,3 @@
         margin-left: 41px;
     }
 }
-
-@media (min-width: 487px) {
-    .products-container {
-        justify-content: flex-start;
-    }
-}

@@ -29,19 +29,20 @@
             class="img"
             [style.background-image]="'url(' + product?.imageUrl + ')'"
           >
-            <div class="fav-img">
+            <div class="fav-img" (click)="addFav()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
                 height="30"
                 viewBox="0 0 30 30"
-                fill="none"
+                [ngClass]="like ? 'like' : 'notLike'"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M4.75794 7.75849C5.88311 6.63366 7.40895 6.00177 8.99994 6.00177C10.5909 6.00177 12.1168 6.63366 13.2419 7.75849L14.9999 9.51499L16.7579 7.75849C17.3114 7.18543 17.9735 6.72833 18.7055 6.41388C19.4375 6.09942 20.2249 5.93391 21.0215 5.92698C21.8182 5.92006 22.6083 6.07187 23.3457 6.37356C24.083 6.67524 24.753 7.12076 25.3163 7.68412C25.8797 8.24747 26.3252 8.91738 26.6269 9.65476C26.9286 10.3921 27.0804 11.1822 27.0734 11.9789C27.0665 12.7756 26.901 13.5629 26.5865 14.2949C26.2721 15.0269 25.815 15.689 25.2419 16.2425L14.9999 26.486L4.75794 16.2425C3.63311 15.1173 3.00122 13.5915 3.00122 12.0005C3.00122 10.4095 3.63311 8.88365 4.75794 7.75849Z"
-                  fill="#F26F3F"
+                  d="M4.67818 9.72244C4.96087 9.03998 5.37521 8.41988 5.89755 7.89755C6.41988 7.37521 7.03998 6.96087 7.72244 6.67818C8.4049 6.3955 9.13636 6.25 9.87505 6.25C10.6137 6.25 11.3452 6.3955 12.0277 6.67818C12.7101 6.96087 13.3302 7.37521 13.8525 7.89755L15.5 9.54505L17.1475 7.89755C18.2024 6.84265 19.6332 6.25001 21.125 6.25001C22.6169 6.25001 24.0476 6.84265 25.1025 7.89755C26.1574 8.95245 26.7501 10.3832 26.7501 11.875C26.7501 13.3669 26.1574 14.7977 25.1025 15.8525L15.5 25.455L5.89755 15.8525C5.37521 15.3302 4.96087 14.7101 4.67818 14.0277C4.3955 13.3452 4.25 12.6137 4.25 11.875C4.25 11.1364 4.3955 10.4049 4.67818 9.72244Z"
+                  stroke="#F26F3F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
             </div>
@@ -70,18 +71,18 @@
                 <div>/Talla {{ selectedSize }}</div>
               </div>
             </div>
-            <div class="iconst-contain" *ngIf="product?.id === 1">
+            <div class="iconst-contain">
               <div
                 class="img-icons"
-                [style.background-image]="'url(  img/products/item-1.svg  )'"
+                [style.background-image]="'url(' + product?.imageUrl + ')'"
               ></div>
               <div
                 class="img-icons"
-                [style.background-image]="'url(  img/products/item-1.svg  )'"
+                [style.background-image]="'url(' + product?.imageUrl + ')'"
               ></div>
               <div
                 class="img-icons"
-                [style.background-image]="'url(  img/products/item-1.svg  )'"
+                [style.background-image]="'url(' + product?.imageUrl + ')'"
               >
                 <p>5+</p>
               </div>
