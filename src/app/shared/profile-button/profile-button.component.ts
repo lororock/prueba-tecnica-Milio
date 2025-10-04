@@ -1,14 +1,16 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'profile-button',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './profile-button.component.html',
   styleUrls: ['./profile-button.component.css']
 })
 export class ProfileButtonComponent{
  @Input() icon = '';
  @Input() text = '';
+ @Input() routerLink = '';
 
 }

@@ -1,0 +1,54 @@
+<div class="favorites-container">
+  <div class="favorites-header">
+    <h1 class="favorites-title">Productos Favoritos</h1>
+    <p class="favorites-subtitle">Tus productos favoritos</p>
+  </div>
+
+  <div class="favorites-content" *ngIf="favoriteProducts.length > 0; else noFavorites">
+    <div class="products-grid">
+      <product-card
+        *ngFor="let product of favoriteProducts; trackBy: trackByProductId"
+        [product]="product"
+        [name]="product.name"
+        [price]="product.price"
+        [img]="product.imageUrl"
+        (openModalEvent)="openModal($event)"
+      ></product-card>
+    </div>
+  </div>
+
+  <ng-template #noFavorites>
+    <div class="no-favorites">
+      <div class="no-favorites-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="80"
+          height="80"
+          viewBox="0 0 30 30"
+          fill="none"
+        >
+          <path
+            d="M4.67818 9.72244C4.96087 9.03998 5.37521 8.41988 5.89755 7.89755C6.41988 7.37521 7.03998 6.96087 7.72244 6.67818C8.4049 6.3955 9.13636 6.25 9.87505 6.25C10.6137 6.25 11.3452 6.3955 12.0277 6.67818C12.7101 6.96087 13.3302 7.37521 13.8525 7.89755L15.5 9.54505L17.1475 7.89755C18.2024 6.84265 19.6332 6.25001 21.125 6.25001C22.6169 6.25001 24.0476 6.84265 25.1025 7.89755C26.1574 8.95245 26.7501 10.3832 26.7501 11.875C26.7501 13.3669 26.1574 14.7977 25.1025 15.8525L15.5 25.455L5.89755 15.8525C5.37521 15.3302 4.96087 14.7101 4.67818 14.0277C4.3955 13.3452 4.25 12.6137 4.25 11.875C4.25 11.1364 4.3955 10.4049 4.67818 9.72244Z"
+            stroke="#F26F3F"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <h2>No tienes productos favoritos</h2>
+      <p>Explora nuestros productos y marca tus favoritos</p>
+      <button class="explore-button" (click)="goToHome()">
+        Explorar Productos
+      </button>
+    </div>
+  </ng-template>
+
+  <!-- Modal -->
+  <modal-description
+    *ngIf="selectedProduct"
+    [product]="selectedProduct"
+    (closeModalEvent)="closeModal()"
+  ></modal-description>
+</div>

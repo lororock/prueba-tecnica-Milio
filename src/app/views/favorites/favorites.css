@@ -1,0 +1,123 @@
+.favorites-container {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.favorites-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+}
+
+.favorites-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #F26F3F;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favorites-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+}
+
+.favorites-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 58px;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    margin-left: 41px;
+  }
+}
+
+@media (max-width: 768px) {
+  .favorites-container {
+    padding: 10px;
+  }
+  
+  .favorites-header {
+    padding: 20px 10px;
+    margin-bottom: 20px;
+  }
+  
+  .favorites-title {
+    font-size: 32px;
+  }
+  
+  .favorites-subtitle {
+    font-size: 16px;
+  }
+  
+  .products-grid {
+    gap: 15px;
+    padding: 10px 0;
+  }
+}
+
+.no-favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.no-favorites-icon {
+  margin-bottom: 30px;
+  opacity: 0.6;
+}
+
+.no-favorites h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.no-favorites p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+.explore-button {
+  background: linear-gradient(135deg, #F26F3F 0%, #e55a2b 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(242, 111, 63, 0.3);
+}
+
+.explore-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(242, 111, 63, 0.4);
+}
+
+.explore-button:active {
+  transform: translateY(0);
+}

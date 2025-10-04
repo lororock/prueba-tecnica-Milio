@@ -3,6 +3,7 @@ import { MainComponent } from './views/main/main.component';
 import { UserComponent } from './views/user/user.component'; 
 import { HomeComponent } from './views/home/home.component';
 import { CategoriesComponent } from './views/categories/categories.component';
+import { FavoritesComponent } from './views/favorites/favorites';
 import { NotFoundComponent } from './views/not-found/not-found.component';
 
 export const routes: Routes = [
@@ -10,6 +11,7 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'user', component: UserComponent },
     { path: 'categories', component: CategoriesComponent },
+    { path: 'favorites', component: FavoritesComponent },
     //se puede agregar mas rutas que requieran las barras de navegacion
   ]},
   { path: '**', component: NotFoundComponent }
